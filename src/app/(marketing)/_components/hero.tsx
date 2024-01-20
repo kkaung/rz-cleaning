@@ -1,0 +1,135 @@
+'use client';
+
+import Dot from '@/components/dot';
+import { Icons } from '@/components/icons';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { buttonVariants } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from '@/components/ui/carousel';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import React, { type HTMLAttributes } from 'react';
+import Balancer from 'react-wrap-balancer';
+import Image from 'next/image';
+import HeroOneImage from '/public/assets/images/hero-one.jpeg';
+import HeroTwoImage from '/public/assets/images/hero-two.jpeg';
+import Autoplay from 'embla-carousel-autoplay';
+
+interface HeroProps extends HTMLAttributes<HTMLElement> {}
+
+export default function Hero({ ...props }: HeroProps) {
+    return (
+        <section
+            id="hero"
+            aria-labelledby="hero-headings"
+            className={cn(
+                props.className,
+                'grid grid-cols-1 gap-8 md:grid-cols-2'
+            )}
+        >
+            <div className="order-2 md:order-1">
+                <Card className="max-w-lg shadow-none border-none md:shadow-lg md:rounded-xl">
+                    <CardHeader className="py-6 px-0 md:p-6 md:pb-0">
+                        <h1 className="font-extrabold text-4xl leading-none">
+                            <Balancer>
+                                Removalists service across Australia at low-cost
+                            </Balancer>
+                        </h1>
+                    </CardHeader>
+                    <CardContent className="space-y-8 p-0 md:p-6">
+                        <p className="text-muted-foreground text-base">
+                            Expert removalists service — trusted by thousands of
+                            customers across Australia. Long Distance Removals.
+                            Any Item Size. Door-to-Door delivery. Same Day
+                            service. Fixed prices.
+                        </p>
+                        <div className="space-y-3 leading-tight">
+                            <div className="flex items-center">
+                                <Icons.check
+                                    className="w-4 h-4 mr-2"
+                                    aria-hidden
+                                    strokeWidth={3}
+                                />
+                                <p>Vetted & Trusted Cleaners</p>
+                            </div>
+                            <div className="flex items-center">
+                                <Icons.check
+                                    className="w-4 h-4 mr-2"
+                                    aria-hidden
+                                    strokeWidth={3}
+                                />
+                                <p>100% Bond Back Guarantee</p>
+                            </div>
+                            <div className="flex items-center">
+                                <Icons.check
+                                    className="w-4 h-4 mr-2"
+                                    aria-hidden
+                                    strokeWidth={3}
+                                />
+                                <p>Trusted by 5000+ Families in Sydney</p>
+                            </div>
+                        </div>
+                        <div className="flex gap-1 items-center text-sm">
+                            <Icons.starFull className="w-4 h-4 text-pink-500" />
+                            <span className="font-semibold">4.9</span>
+                            <Dot />
+                            <span className="text-muted-foreground underline">
+                                700 reviews
+                            </span>
+                        </div>
+                        <div className="flex flex-col text-center">
+                            <Link
+                                href="/booking"
+                                className={cn(
+                                    buttonVariants({ size: 'lg' }),
+                                    'font-semibold'
+                                )}
+                            >
+                                Get An Instant Quote
+                            </Link>
+                            <div className="text-sm mt-2 itali px-4">
+                                It takes only 60 seconds
+                            </div>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
+            <div className="order-1 md:order-2">
+                <Carousel
+                    className="w-full"
+                    plugins={[
+                        Autoplay({
+                            delay: 5000,
+                        }),
+                    ]}
+                >
+                    <CarouselContent>
+                        {Array.from({ length: 5 }).map((_, index) => (
+                            <CarouselItem key={index}>
+                                <div className="p-1">
+                                    <div className="overflow-hidden rounded-xl">
+                                        <AspectRatio
+                                            ratio={16 / 9}
+                                            className="bg-secondary"
+                                        >
+                                            <Image
+                                                fill
+                                                src={HeroOneImage}
+                                                alt=""
+                                                className="bg-center object-cover bg-no-repeat"
+                                            />
+                                        </AspectRatio>
+                                    </div>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                </Carousel>
+            </div>
+        </section>
+    );
+}
