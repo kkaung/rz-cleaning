@@ -60,20 +60,17 @@ export default function Features({ ...props }: FeaturesProps) {
                     More Than Just A Cleaning Service
                 </h2>
             </div>
-            <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <ul className="grid grid-cols-1 gap-y-6 gap-x-12 md:grid-cols-3">
                 {items.map((item, idx) => {
-                    const isLastIdx = idx === items.length;
-
                     return (
-                        <>
-                            <li key={idx} className="space-y-3">
-                                <h3 className="font-semibold">{item.title}</h3>
-                                <p className="leading-tight text-muted-foreground">
-                                    {item.content}
-                                </p>
-                            </li>
-                            {isLastIdx ? <Separator /> : null}
-                        </>
+                        <li key={idx} className="space-y-3 py-6 border-b">
+                            <h3 className="font-semibold text-lg">
+                                {item.title}
+                            </h3>
+                            <p className="leading-tight text-muted-foreground">
+                                {item.content}
+                            </p>
+                        </li>
                     );
                 })}
             </ul>

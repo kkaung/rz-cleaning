@@ -21,7 +21,7 @@ export default function HowWork({ ...props }: HowWorkProps) {
             <h2 className="font-extrabold text-4xl">How It Works</h2>
             <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
                 <li>
-                    <div className="flex space-y-2 gap-4 sm:gap-6">
+                    <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
                         <Image
                             width={150}
                             height={150}
@@ -41,7 +41,7 @@ export default function HowWork({ ...props }: HowWorkProps) {
                     </div>
                 </li>
                 <li>
-                    <div className="flex space-y-2 gap-4 sm:gap-6">
+                    <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
                         <Image
                             width={150}
                             height={150}
@@ -59,12 +59,13 @@ export default function HowWork({ ...props }: HowWorkProps) {
                     </div>
                 </li>
                 <li>
-                    <div className="flex space-y-2 gap-4 sm:gap-6">
+                    <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
                         <Image
                             width={150}
                             height={150}
                             src={YouRelaxImage}
                             alt="Book Online"
+                            className="mx-auto"
                         />
                         <div className="space-y-3">
                             <p className="font-semibold text-lg">

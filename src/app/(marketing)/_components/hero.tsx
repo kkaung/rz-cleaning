@@ -17,6 +17,7 @@ import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
 import HeroOneImage from '/public/assets/images/hero-one.jpeg';
 import HeroTwoImage from '/public/assets/images/hero-two.jpeg';
+import HeroThreeImage from '/public/assets/images/hero-three.jpeg';
 import Autoplay from 'embla-carousel-autoplay';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {}
@@ -28,12 +29,12 @@ export default function Hero({ ...props }: HeroProps) {
             aria-labelledby="hero-headings"
             className={cn(
                 props.className,
-                'grid grid-cols-1 gap-8 md:grid-cols-2'
+                'grid grid-cols-1 gap-6 items-center md:grid-cols-2 md:gap-8'
             )}
         >
             <div className="order-2 md:order-1">
                 <Card className="max-w-lg shadow-none border-none md:shadow-lg md:rounded-xl">
-                    <CardHeader className="py-6 px-0 md:p-6 md:pb-0">
+                    <CardHeader className="py-6 pt-0 px-0 md:p-6 md:pb-0 md:pt-6">
                         <h1 className="font-extrabold text-4xl leading-none">
                             <Balancer>
                                 Removalists service across Australia at low-cost
@@ -103,30 +104,65 @@ export default function Hero({ ...props }: HeroProps) {
                     className="w-full"
                     plugins={[
                         Autoplay({
-                            delay: 5000,
+                            delay: 7000,
                         }),
                     ]}
+                    opts={{
+                        loop: true,
+                    }}
                 >
                     <CarouselContent>
-                        {Array.from({ length: 5 }).map((_, index) => (
-                            <CarouselItem key={index}>
-                                <div className="p-1">
-                                    <div className="overflow-hidden rounded-xl">
-                                        <AspectRatio
-                                            ratio={16 / 9}
-                                            className="bg-secondary"
-                                        >
-                                            <Image
-                                                fill
-                                                src={HeroOneImage}
-                                                alt=""
-                                                className="bg-center object-cover bg-no-repeat"
-                                            />
-                                        </AspectRatio>
-                                    </div>
+                        <CarouselItem>
+                            <div className="p-1">
+                                <div className="overflow-hidden rounded-xl">
+                                    <AspectRatio
+                                        ratio={16 / 9}
+                                        className="bg-secondary"
+                                    >
+                                        <Image
+                                            fill
+                                            src={HeroOneImage}
+                                            alt="End Of Lease Cleaner"
+                                            className="object-top object-cover bg-no-repeat"
+                                        />
+                                    </AspectRatio>
                                 </div>
-                            </CarouselItem>
-                        ))}
+                            </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <div className="p-1">
+                                <div className="overflow-hidden rounded-xl">
+                                    <AspectRatio
+                                        ratio={16 / 9}
+                                        className="bg-secondary"
+                                    >
+                                        <Image
+                                            fill
+                                            src={HeroTwoImage}
+                                            alt="Moving Out Cleaner"
+                                            className="object-top object-cover bg-no-repeat"
+                                        />
+                                    </AspectRatio>
+                                </div>
+                            </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <div className="p-1">
+                                <div className="overflow-hidden rounded-xl">
+                                    <AspectRatio
+                                        ratio={16 / 9}
+                                        className="bg-secondary"
+                                    >
+                                        <Image
+                                            fill
+                                            src={HeroThreeImage}
+                                            alt="Vacate Cleaner"
+                                            className="object-top object-cover bg-no-repeat"
+                                        />
+                                    </AspectRatio>
+                                </div>
+                            </div>
+                        </CarouselItem>
                     </CarouselContent>
                 </Carousel>
             </div>

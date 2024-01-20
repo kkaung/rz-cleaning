@@ -31,7 +31,7 @@ export default function Page() {
                 <Reviews />
                 <HowWork />
                 <Features />
-                <Checklist />
+                {/* <Checklist /> */}
                 <Gurantee />
                 <Services />
                 <FAQs />

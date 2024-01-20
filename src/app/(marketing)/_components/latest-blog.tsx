@@ -1,6 +1,6 @@
 import { headingVariants } from '@/components/page-header';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { cn } from '@/lib/utils';
+import { cn, formatDate } from '@/lib/utils';
 import { allPosts } from 'contentlayer/generated';
 import React, { type HTMLAttributes } from 'react';
 import Image from 'next/image';
@@ -22,7 +22,7 @@ export default function LatestBlog({ ...props }: LatestBlogProps) {
             <ul className="flex flex-nowrap overflow-x-scroll gap-6">
                 {allPosts.map((post, idx) => (
                     <li key={idx} className="w-[300px]">
-                        <article className="relative">
+                        <article className="relative space-y-2">
                             <AspectRatio
                                 ratio={16 / 9}
                                 className="overflow-hidden rounded-xl relative mb-2"
@@ -47,6 +47,9 @@ export default function LatestBlog({ ...props }: LatestBlogProps) {
                                     {post.title}
                                 </h4>
                             </Link>
+                            <p className="text-muted-foreground text-sm">
+                                {formatDate(post.date)}
+                            </p>
                         </article>
                     </li>
                 ))}

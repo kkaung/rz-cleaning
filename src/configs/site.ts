@@ -5,7 +5,7 @@ export type SiteConfig = typeof siteConfig;
 
 const links = {
     facebook: 'https://facebook.com/',
-    instagram: 'https://github.com/',
+    instagram: 'https://instagram.com/',
     twitter: 'https://twitter.com/',
     pinterest: 'https://pinterest.com/',
     tiktok: 'https://tiktok.com',
@@ -19,12 +19,15 @@ export const siteConfig = {
     name: 'RZ Cleaning',
     title: `Sydney's Premium House Cleaning Serivce`,
     description: '',
-    url: 'https://majormaid.com.au',
-    ogImage: 'https://majormaid.com.au/opengraph-image.png',
+    url: 'https://rzcleaning.com.au',
+    ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
     mainNav: [
         {
             title: 'Services',
-            items: [{ title: '', href: '/' }],
+            items: [
+                { title: 'Vacate Cleaning', href: '/vacate-cleaning-sydney' },
+                { title: 'Bond Cleaning', href: '/bond-cleaning-sydney' },
+            ],
         },
         {
             title: 'Pricing',
@@ -37,16 +40,12 @@ export const siteConfig = {
             title: 'Services',
             items: [
                 {
-                    title: 'House Cleaing',
-                    href: '/house-cleaning-sydney',
+                    title: 'Vacate Cleaing',
+                    href: '/vacate-cleaning-sydney',
                 },
                 {
-                    title: 'Regular Cleaing',
-                    href: '/regular-cleaning-sydney',
-                },
-                {
-                    title: 'Deep Cleaing',
-                    href: '/deep-cleaning-sydney',
+                    title: 'Bond Cleaing',
+                    href: '/bond-cleaning-sydney',
                 },
             ],
         },
@@ -86,7 +85,7 @@ export const siteConfig = {
     },
     rating: {
         ratingValue: '4.9',
-        ratingCount: '528',
+        ratingCount: '727',
     },
 };
 
@@ -94,52 +93,4 @@ export const siteServices: {
     title: string;
     slug: string;
     icon?: keyof typeof Icons;
-}[] = [
-    {
-        title: 'House Cleaning',
-        slug: 'house-cleaning',
-        icon: 'house',
-    },
-    {
-        title: 'Regular Cleaning',
-        slug: 'regular-cleaning',
-    },
-    {
-        title: 'Deep Cleaning',
-        slug: 'deep-cleaning',
-    },
-    {
-        title: 'End Lease Cleaning',
-        slug: 'end-lease-cleaning',
-    },
-    {
-        title: 'Oven Cleaning',
-        slug: 'oven-cleaning',
-    },
-    {
-        title: 'Bond Cleaning',
-        slug: 'bond-cleaning',
-    },
-    {
-        title: 'Office Cleaning',
-        slug: 'office-cleaning',
-        icon: 'building',
-    },
-    {
-        title: 'NDIS Cleaning',
-        slug: 'ndis-cleaning',
-    },
-    {
-        title: 'Carpet Cleaning',
-        slug: 'carpet-cleaning',
-        icon: 'carpet',
-    },
-    {
-        title: 'Move In - Move Out',
-        slug: 'move-in-move-out-cleaning',
-    },
-    {
-        title: 'Tile Cleaning',
-        slug: 'tile-cleaning',
-    },
-];
+}[] = [];

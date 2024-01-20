@@ -2,7 +2,7 @@ import { headingVariants } from '@/components/page-header';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
 import Image from 'next/image';
-import FeaturedImage from '/public/assets/images/hero-one.jpeg';
+import FeaturedImage from '/public/assets/images/guarantee.jpeg';
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 
