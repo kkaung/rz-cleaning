@@ -1,5 +1,4 @@
 import { headingVariants } from '@/components/page-header';
-import { Separator } from '@/components/ui/separator';
 import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
 import React, { type HTMLAttributes } from 'react';
@@ -9,7 +8,7 @@ interface FeaturesProps extends HTMLAttributes<HTMLElement> {}
 const items = [
     {
         title: '100% Bond Back Guarantee',
-        content: `Bond Cleaning Sydney uses superior cleaning tools and offers a bond back guarantee for 7 days (Ts and Cs Apply).`,
+        content: `If your real estate agent spots any issues within 72 hours after our clean, we'll come back to fix them—completely free of charge.`,
     },
     {
         title: 'Simple & Easy Booking',
@@ -17,23 +16,23 @@ const items = [
     },
     {
         title: 'Expert End Of Lease Cleaners',
-        content: `You can trust our cleaning teams to do the best job possible so you can get your bond back.`,
+        content: `Our staff are professionally trained so you can trust our cleaning teams to do the best job possible so you can get your bond back.`,
     },
     {
         title: 'Cleaning Equipment Provided',
         content: `For your convenience, our team brings their own cleaning equipment for each service.`,
     },
     {
-        title: 'Fully Insured Against Damages',
-        content: `Our end of lease cleaning service is covered by our $20 million public liability insurance.`,
+        title: 'Full Liability Insurance',
+        content: `Our end of lease cleaning service is covered by our $10 million public liability insurance.`,
     },
     {
         title: 'Exceptional Customer Service',
-        content: `Count on our expert customer service team for support at every stage of your cleaning journey.`,
+        content: `Trust our expert customer service team for comprehensive support from inquiry to post-service, ensuring your satisfaction at every stage.`,
     },
     {
         title: 'Across Sydney',
-        content: `We’ve got vetted cleaners across Sydney, ready to help get you on the move.`,
+        content: `We’ve got vetted end lease cleaners across Sydney, ready to help get you on the move.`,
     },
     {
         title: 'No Hidden Fees',
@@ -41,7 +40,7 @@ const items = [
     },
     {
         title: '7 days / week',
-        content: `We’ve got teams available at any day of the week, including public holidays and overnight transportation.`,
+        content: `We’ve got cleaning teams available at any day of the week, including public holidays.`,
     },
 ];
 

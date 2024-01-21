@@ -4,12 +4,10 @@ import type { FooterItem, MainNavItem } from '@/types';
 export type SiteConfig = typeof siteConfig;
 
 const links = {
-    facebook: 'https://facebook.com/',
+    facebook: 'https://www.facebook.com/profile.php?id=61555684296875',
     instagram: 'https://instagram.com/',
     twitter: 'https://twitter.com/',
     pinterest: 'https://pinterest.com/',
-    tiktok: 'https://tiktok.com',
-    temblr: 'https://temblr.com',
     linkin: 'https://linkin.com',
     youtube: 'https://youtube.com',
 };
@@ -22,13 +20,17 @@ export const siteConfig = {
     url: 'https://rzcleaning.com.au',
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
     mainNav: [
-        {
-            title: 'Services',
-            items: [
-                { title: 'Vacate Cleaning', href: '/vacate-cleaning-sydney' },
-                { title: 'Bond Cleaning', href: '/bond-cleaning-sydney' },
-            ],
-        },
+        // {
+        //     title: 'Services',
+        //     items: [
+        //         { title: 'Vacate Cleaning', href: '/vacate-cleaning-sydney' },
+        //         { title: 'Bond Cleaning', href: '/bond-cleaning-sydney' },
+        //         {
+        //             title: 'Move Out Cleaning',
+        //             href: '/move-out-cleaning-sydney',
+        //         },
+        //     ],
+        // },
         {
             title: 'Pricing',
             href: '/pricing',
@@ -36,19 +38,23 @@ export const siteConfig = {
     ] satisfies MainNavItem[],
     links,
     footerNav: [
-        {
-            title: 'Services',
-            items: [
-                {
-                    title: 'Vacate Cleaing',
-                    href: '/vacate-cleaning-sydney',
-                },
-                {
-                    title: 'Bond Cleaing',
-                    href: '/bond-cleaning-sydney',
-                },
-            ],
-        },
+        // {
+        //     title: 'Services',
+        //     items: [
+        //         {
+        //             title: 'Vacate Cleaning',
+        //             href: '/vacate-cleaning-sydney',
+        //         },
+        //         {
+        //             title: 'Bond Cleaning',
+        //             href: '/bond-cleaning-sydney',
+        //         },
+        //         {
+        //             title: 'Move Out Cleaning',
+        //             href: '/move-out-cleaning-sydney',
+        //         },
+        //     ],
+        // },
         {
             title: 'Location',
             items: [

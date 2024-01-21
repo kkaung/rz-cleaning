@@ -19,6 +19,7 @@ import HeroOneImage from '/public/assets/images/hero-one.jpeg';
 import HeroTwoImage from '/public/assets/images/hero-two.jpeg';
 import HeroThreeImage from '/public/assets/images/hero-three.jpeg';
 import Autoplay from 'embla-carousel-autoplay';
+import { siteConfig } from '@/configs/site';
 
 interface HeroProps extends HTMLAttributes<HTMLElement> {}
 
@@ -37,16 +38,17 @@ export default function Hero({ ...props }: HeroProps) {
                     <CardHeader className="py-6 pt-0 px-0 md:p-6 md:pb-0 md:pt-6">
                         <h1 className="font-extrabold text-4xl leading-none">
                             <Balancer>
-                                Removalists service across Australia at low-cost
+                                Sydney&apos;s Favourite <br /> End Of Lease
+                                Cleaning Service
                             </Balancer>
                         </h1>
                     </CardHeader>
                     <CardContent className="space-y-8 p-0 md:p-6">
                         <p className="text-muted-foreground text-base">
-                            Expert removalists service — trusted by thousands of
-                            customers across Australia. Long Distance Removals.
-                            Any Item Size. Door-to-Door delivery. Same Day
-                            service. Fixed prices.
+                            Lowest Price Guarantee Bond Cleaning Service —
+                            trusted by thousands of customers across Sydney.
+                            Secure the return of your security bond with our
+                            thorough bond cleaning service.
                         </p>
                         <div className="space-y-3 leading-tight">
                             <div className="flex items-center">
@@ -71,15 +73,17 @@ export default function Hero({ ...props }: HeroProps) {
                                     aria-hidden
                                     strokeWidth={3}
                                 />
-                                <p>Trusted by 5000+ Families in Sydney</p>
+                                <p>Trusted by 1000+ monthly movers in Sydney</p>
                             </div>
                         </div>
                         <div className="flex gap-1 items-center text-sm">
                             <Icons.starFull className="w-4 h-4 text-pink-500" />
-                            <span className="font-semibold">4.9</span>
+                            <span className="font-semibold">
+                                {siteConfig.rating.ratingValue}
+                            </span>
                             <Dot />
                             <span className="text-muted-foreground underline">
-                                700 reviews
+                                {siteConfig.rating.ratingCount} reviews
                             </span>
                         </div>
                         <div className="flex flex-col text-center">
@@ -104,7 +108,7 @@ export default function Hero({ ...props }: HeroProps) {
                     className="w-full"
                     plugins={[
                         Autoplay({
-                            delay: 7000,
+                            delay: 5000,
                         }),
                     ]}
                     opts={{

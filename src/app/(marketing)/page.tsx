@@ -19,8 +19,8 @@ import Commitment from './_components/commitment';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: '',
-    description: '',
+    title: `End Of Lease Cleaning Sydney`,
+    description: `Professional End of Lease Cleaning Service In Sydney with 100% Bond Back Guarantee. Book online in less than 60 seconds.`,
 };
 
 export default function Page() {
@@ -37,7 +37,7 @@ export default function Page() {
                 <FAQs />
                 <About />
                 <LatestBlog />
-                <Suburbs />
+                {/* <Suburbs /> */}
                 <Commitment />
             </Shell>
             <WebPageJsonLd useAppDir id={''} />

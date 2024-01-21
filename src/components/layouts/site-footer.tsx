@@ -5,15 +5,16 @@ import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
 import { Separator } from '@/components/ui/separator';
+import FooterTabs from '../footer-tabs';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
 export default async function SiteFooter({ ...props }: SiteFooterProps) {
     return (
-        <footer className="md:mb-12">
+        <footer className="md:my-12">
             <Shell
                 as="div"
-                className="max-w-6xl w-full mx-auto bg-secondary md:rounded-xl"
+                className="mx-auto w-full max-w-7xl bg-secondary md:rounded-xl"
             >
                 <section
                     id="footer-content"
@@ -33,9 +34,8 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
                         <p className="my-4 max-w-xs text-xs md:text-sm">
-                            {siteConfig.name} is here to transform your house
-                            into home with our professional house cleaning
-                            services.
+                            You move out, we handle the meticulous cleanup with
+                            care.
                         </p>
                         <div className="flex flex-col mt-2 space-y-2">
                             <div className={cn('cursor-pointer text-sm')}>
@@ -153,20 +153,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             href={siteConfig.links.pinterest}
                         >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            aria-label="Tiktok"
-                            target="_blank"
-                            href={siteConfig.links.tiktok}
-                        >
-                            <Icons.tiktok aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            aria-label="Temblr"
-                            target="_blank"
-                            href={siteConfig.links.temblr}
-                        >
-                            <Icons.temblr aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>

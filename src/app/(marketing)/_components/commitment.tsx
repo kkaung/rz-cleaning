@@ -19,14 +19,12 @@ export default function Commitment({ ...props }: CommitmentProps) {
         >
             <h3 className={headingVariants({ size: 'sm' })}>
                 <Balancer>
-                    We’re Committed To 200% Customer Satisfaction <br /> Each
-                    And Every Time
+                    200% Customer Satisfaction, <br /> Our Commitment
                 </Balancer>
             </h3>
             <p className="text-lg">
                 If you’re not happy with our work, we make it right!
             </p>
-            <Link href="">Booking</Link>
         </section>
     );
 }

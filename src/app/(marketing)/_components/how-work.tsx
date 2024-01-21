@@ -34,8 +34,8 @@ export default function HowWork({ ...props }: HowWorkProps) {
                                 1. Book Online
                             </p>
                             <p>
-                                Book your Sydney house cleaning service online
-                                in 60 seconds.
+                                Book your Sydney end lease cleaning service
+                                online in 60 seconds.
                             </p>
                         </div>
                     </div>
@@ -52,8 +52,8 @@ export default function HowWork({ ...props }: HowWorkProps) {
                         <div className="space-y-3">
                             <p className="font-semibold text-lg">2. We Clean</p>
                             <p>
-                                Our cleaners in Sydney will come over &
-                                professionally clean your home.
+                                Our end lease cleaners in Sydney will come over
+                                & professionally clean your home.
                             </p>
                         </div>
                     </div>
@@ -72,8 +72,8 @@ export default function HowWork({ ...props }: HowWorkProps) {
                                 3. You Relax
                             </p>
                             <p>
-                                Sit back, relax and enjoy your sparkling clean
-                                home.
+                                Sit back, relax and have your rental bond
+                                returned.
                             </p>
                         </div>
                     </div>

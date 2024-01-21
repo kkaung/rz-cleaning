@@ -14,15 +14,16 @@ export default function About({ ...props }: AboutPropse) {
             <h3 className={cn(headingVariants({}))}>About {siteConfig.name}</h3>
             <div className="space-y-6">
                 <p>
-                    We are Upmove, Australia’s leading online platform for
-                    matching customers up with the best removalists Australia
-                    has to offer.
+                    We are RZCleaning, Australia’s leading online platform for
+                    matching customers up with the best end of lease, bond
+                    cleaners across Sydney and Melbourne.
                 </p>
                 <p>
-                    Founded in 2017, Upmove is dedicated to building a better
-                    removals experience for Australia, providing customers and
-                    removalists with the platform they need to make the process
-                    quicker, smoother and simpler.
+                    Founded in 2013, RZCleaning is committed to enhancing the
+                    cleaning experience in Sydney and Melbourne. We empower
+                    customers and cleaning professionals with a streamlined
+                    platform, making the entire process faster, smoother, and
+                    more straightforward.
                 </p>
             </div>
         </section>

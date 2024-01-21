@@ -30,10 +30,10 @@ export default function Gurantee({ ...props }: GuranteeProps) {
                     72 Hours Bond Back Guarantee
                 </h2>
                 <p className="text-primary/80">
-                    Book your cleaning service with confidence. Knowing that
-                    your professional end of lease cleaning service is backed by
-                    our 100% Bond Return. Book your bond cleaning Sydney online
-                    in 60 seconds.
+                    Book your cleaning service with absolute confidence. Our
+                    professional end-of-lease cleaning comes with a 100% Bond
+                    Return assurance, ensuring peace of mind. Secure your bond
+                    cleaning in Sydney effortlessly online in just 60 seconds.
                 </p>
                 <Link href="" className={cn(buttonVariants({}))}>
                     Book My Cleaning

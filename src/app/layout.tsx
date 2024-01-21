@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     keywords: [],
     authors: [],
-    creator: 'majormaid_au',
+    creator: 'rkcleaning_au',
     openGraph: {
         type: 'website',
         locale: 'en_US',

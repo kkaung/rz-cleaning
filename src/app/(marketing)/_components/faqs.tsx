@@ -49,12 +49,16 @@ const getFAQs = (location?: string) => {
             answer: 'No assurance for same-day bookings, but we often meet the request depending on the day.',
         },
         {
-            question: 'How easily can I book online?',
+            question: 'Can I get a receipt to show my real estate agent?',
+            answer: 'Absolutely. Once your cleaning service has been completed and your card has been charged, a service receipt will automatically be emailed to you.',
+        },
+        {
+            question: 'Do you provide urgent end of lease cleans?',
             answer: '',
         },
         {
             question: `What is your cancellation policy?`,
-            answer: '',
+            answer: 'For cancellations, please provide us with a 24-hour notice to avoid a late cancellation fee. Our cleaning teams’ schedules are meticulously planned, and cancellations within 24 hours of service result in lost work opportunities for them.',
         },
     ];
 };

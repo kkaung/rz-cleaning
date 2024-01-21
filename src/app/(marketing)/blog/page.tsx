@@ -21,6 +21,8 @@ import {
 } from '@/components/ui/pagination';
 import { BlogTabs } from './_components/blog-tabs';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
     title: '',
     description: '',

@@ -9,51 +9,47 @@ const reviews = [
     {
         name: 'Emily',
         location: '',
-        body: 'Ask for Angie A amazing job done for my house! Call them asap if you need a clean!',
+        body: 'RZ Cleaning Team did a great job on our apartment. Everything was spotless and we got 100% of our bond back. I would definitely recommend them for End of Lease cleaning.',
     },
     {
         name: 'Dora',
-        body: 'Our cleaner took such care and really took his time to make sure my apartment was properly cleaned and even did some nice finishing touches like arranging the cushions better than I ever can!',
+        body: 'Our Cleaners provided excellent cleaning for my end of lease. Reliable and friendly people. I would definitely reach out to them again!',
     },
     {
         name: 'Durden',
         body: 'I am very satisfied with the cleaning service. Brenda was extremely thorough, and my place is spotless! Highly recommend.',
     },
     {
-        name: 'Kelly',
-        body: 'Vivi and the team arrived punctually, were very friendly, professional and did a great job. Highly recommend.',
-    },
-    {
-        name: 'John',
-        body: 'Amazing job unit was spotless really happy with the result would use for end of lease clean.',
-    },
-    {
-        name: 'Alex',
-        body: 'Amazing job unit was spotless really happy with the result would use for end of lease clean.',
-    },
-    {
-        name: 'Emily',
-        body: 'Ask for Angie A amazing job done for my house! Call them asap if you need a clean!',
-    },
-    {
-        name: 'Dora',
-        body: 'Our cleaner took such care and really took his time to make sure my apartment was properly cleaned and even did some nice finishing touches like arranging the cushions better than I ever can!',
-    },
-    {
-        name: 'Durden',
-        body: 'I am very satisfied with the cleaning service. Brenda was extremely thorough, and my place is spotless! Highly recommend.',
+        name: 'Jessie W',
+        body: 'We booked the service for our end of lease cleaning and I couldn’t be happier. The flat is spotless and the service was amazing including the customer service before and after the cleaning. I will totally recommend RZ Cleaning.',
     },
     {
         name: 'Kelly',
         body: 'Vivi and the team arrived punctually, were very friendly, professional and did a great job. Highly recommend.',
     },
     {
+        name: 'Nick',
+        body: 'Very pleased with my end of lease clean from Angie and Yeimy. Great job and a reasonable price!',
+    },
+    {
         name: 'John',
         body: 'Amazing job unit was spotless really happy with the result would use for end of lease clean.',
     },
     {
-        name: 'Alex',
-        body: 'Amazing job unit was spotless really happy with the result would use for end of lease clean.',
+        name: 'Nicole',
+        body: 'Karen and Monica were booked at short notice to do our end-of-lease cleaning - they did a great job, would definitely recommend them!',
+    },
+    {
+        name: 'Melanie',
+        body: `I've used RZ Cleaning twice for lease end moving-out cleaning, and on both occasions they have been very open and communicative. The cleaning met all my expectations and would recommend them.`,
+    },
+    {
+        name: 'Sarah',
+        body: `Vivi and Robin did an amazing job cleaning the apartment for my end of lease. They were super helpful and responsive and sent a lot of photos after cleaning to ensure satisfaction.`,
+    },
+    {
+        name: 'Peter M',
+        body: `I have used many cleaning companies over the years and RZ Cleaning is the best I have found in Sydney.`,
     },
 ];
 
