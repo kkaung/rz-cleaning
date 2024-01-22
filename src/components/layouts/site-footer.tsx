@@ -116,6 +116,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             aria-label="Facebook"
                             target="_blank"
                             href={siteConfig.links.facebook}
+                            rel="nofollow"
                         >
                             <Icons.facebook aria-hidden className="h-4 w-4" />
                         </Link>
@@ -123,6 +124,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             aria-label="Instagram"
                             target="_blank"
                             href={siteConfig.links.instagram}
+                            rel="nofollow"
                         >
                             <Icons.instagram aria-hidden className="h-4 w-4" />
                         </Link>
@@ -130,6 +132,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             aria-label="Twitter"
                             target="_blank"
                             href={siteConfig.links.twitter}
+                            rel="nofollow"
                         >
                             <Icons.twitter aria-hidden className="h-4 w-4" />
                         </Link>
@@ -137,6 +140,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             aria-label="Youtube"
                             target="_blank"
                             href={siteConfig.links.youtube}
+                            rel="nofollow"
                         >
                             <Icons.youtube aria-hidden className="h-4 w-4" />
                         </Link>
@@ -144,6 +148,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             aria-label="Linkin"
                             target="_blank"
                             href={siteConfig.links.linkin}
+                            rel="nofollow"
                         >
                             <Icons.linkin aria-hidden className="h-4 w-4" />
                         </Link>
@@ -151,6 +156,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             aria-label="Pinterest"
                             target="_blank"
                             href={siteConfig.links.pinterest}
+                            rel="nofollow"
                         >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
                         </Link>

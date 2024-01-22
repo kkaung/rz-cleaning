@@ -74,7 +74,6 @@ export const siteConfig = {
                 { title: 'Contact Us', href: '/contact' },
                 { title: 'About Us', href: '/about' },
                 { title: 'Blog', href: '/blog' },
-                { title: 'Reviews', href: '/reviews' },
                 { title: 'Pricing', href: '/pricing' },
                 { title: 'Checklist', href: '/checklist' },
                 { title: 'FAQs', href: '/frequently-asked-questions' },

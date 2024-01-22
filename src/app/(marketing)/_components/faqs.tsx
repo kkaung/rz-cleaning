@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
 import { descriptionVariants, headingVariants } from '@/components/page-header';
 import AccordionList from '@/components/accordion-list';
+import { FAQPageJsonLd } from 'next-seo';
 
 const getFAQs = (location?: string) => {
     return [
@@ -68,35 +69,42 @@ interface FAQsProps extends HTMLAttributes<HTMLElement> {
 }
 
 export default function FAQs({ location = 'Sydney', ...props }: FAQsProps) {
+    const faqs = getFAQs().map(i => {
+        return { questionName: i.question, acceptedAnswerText: i.answer };
+    });
+
     return (
-        <section
-            id="faqs"
-            aria-labelledby="faqs-heading"
-            className={cn(props.className, 'py-12')}
-            {...props}
-        >
-            <div className="mx-auto max-w-4xl w-full space-y-6">
-                <h2 className={cn(headingVariants({}), 'text-center')}>
-                    Frequently Asked Questions
-                </h2>
-                <AccordionList items={getFAQs(location)} />
-                <div className="text-center">
-                    <Link
-                        href="/frequently-asked-questions"
-                        className="underline font-bold group hover:no-underline"
-                    >
-                        See All
-                        <Icons.arrowRight
-                            aria-hidden
-                            className="ml-1 w-4 h-4 inline transition-all group-hover:translate-x-1"
-                            strokeWidth={3}
-                        />
-                        <span className="sr-only">
-                            See All Frequently Asked Questions
-                        </span>
-                    </Link>
+        <>
+            <section
+                id="faqs"
+                aria-labelledby="faqs-heading"
+                className={cn(props.className, 'py-12')}
+                {...props}
+            >
+                <div className="mx-auto max-w-4xl w-full space-y-6">
+                    <h2 className={cn(headingVariants({}), 'text-center')}>
+                        Frequently Asked Questions
+                    </h2>
+                    <AccordionList items={getFAQs(location)} />
+                    <div className="text-center">
+                        <Link
+                            href="/frequently-asked-questions"
+                            className="underline font-bold group hover:no-underline"
+                        >
+                            See All
+                            <Icons.arrowRight
+                                aria-hidden
+                                className="ml-1 w-4 h-4 inline transition-all group-hover:translate-x-1"
+                                strokeWidth={3}
+                            />
+                            <span className="sr-only">
+                                See All Frequently Asked Questions
+                            </span>
+                        </Link>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <FAQPageJsonLd useAppDir mainEntity={faqs} />
+        </>
     );
 }

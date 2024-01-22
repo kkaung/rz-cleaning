@@ -1,7 +1,7 @@
 import { Shell } from '@/components/shell';
 import { type Metadata } from 'next';
 import React from 'react';
-import { WebPageJsonLd, FAQPageJsonLd, BreadcrumbJsonLd } from 'next-seo';
+import { BreadcrumbJsonLd, OrganizationJsonLd } from 'next-seo';
 
 import Hero from './_components/hero';
 import HowWork from './_components/how-work';
@@ -15,6 +15,8 @@ import Gurantee from './_components/gurantee';
 import LatestBlog from './_components/latest-blog';
 import About from './_components/about';
 import Commitment from './_components/commitment';
+import { absoluteUrl } from '@/lib/utils';
+import { siteConfig } from '@/configs/site';
 
 export const runtime = 'edge';
 
@@ -40,9 +42,41 @@ export default function Page() {
                 {/* <Suburbs /> */}
                 <Commitment />
             </Shell>
-            <WebPageJsonLd useAppDir id={''} />
-            <FAQPageJsonLd useAppDir mainEntity={[]} />
-            <BreadcrumbJsonLd useAppDir itemListElements={[]} />
+            <OrganizationJsonLd
+                useAppDir
+                id={absoluteUrl('')}
+                type=""
+                name={siteConfig.name}
+                description={siteConfig.description}
+                legalName={siteConfig.name}
+                url={absoluteUrl('')}
+                logo={absoluteUrl('/')}
+                sameAs={[siteConfig.links.facebook, siteConfig.links.linkin]}
+                address={{
+                    streetAddress: '1600 Saratoga Ave',
+                    addressLocality: 'San Jose',
+                    addressRegion: 'CA',
+                    postalCode: '95129',
+                    addressCountry: 'US',
+                }}
+                aggregateRating={{
+                    ratingValue: siteConfig.rating.ratingValue,
+                    ratingCount: siteConfig.rating.ratingCount,
+                }}
+                brand={{
+                    name: siteConfig.name,
+                }}
+            />
+            <BreadcrumbJsonLd
+                useAppDir
+                itemListElements={[
+                    {
+                        position: 1,
+                        name: 'Home',
+                        item: absoluteUrl(''),
+                    },
+                ]}
+            />
         </>
     );
 }
