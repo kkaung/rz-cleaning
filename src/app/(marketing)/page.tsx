@@ -53,11 +53,11 @@ export default function Page() {
                 logo={absoluteUrl('/')}
                 sameAs={[siteConfig.links.facebook, siteConfig.links.linkin]}
                 address={{
-                    streetAddress: '1600 Saratoga Ave',
-                    addressLocality: 'San Jose',
-                    addressRegion: 'CA',
-                    postalCode: '95129',
-                    addressCountry: 'US',
+                    streetAddress: '101/ 761 - 763 George St Haymarket',
+                    addressLocality: 'Sydney',
+                    addressRegion: 'NSW',
+                    postalCode: '2000',
+                    addressCountry: 'AU',
                 }}
                 aggregateRating={{
                     ratingValue: siteConfig.rating.ratingValue,
