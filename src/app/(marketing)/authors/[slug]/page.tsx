@@ -11,14 +11,29 @@ import { allAuthors, allPosts } from 'contentlayer/generated';
 import { type Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
-import PostCard from '../../blog/_components/post-card';
 import { Icons } from '@/components/icons';
 import Link from 'next/link';
+import { getPathname } from '@/lib/next';
 
-export const metadata: Metadata = {
-    title: '',
-    description: '',
-};
+import PostCard from '../../blog/_components/post-card';
+
+export async function generateMetadata({
+    params,
+}: PageProps): Promise<Metadata> {
+    const pathname = getPathname();
+
+    const author = allAuthors.find(
+        author => author.slugAsParams === params.slug
+    )!;
+
+    return {
+        title: `${author.title}'s Post Archive`,
+        description: `Explore a curated collection of insightful posts from ${author.title}'s archive.`,
+        alternates: {
+            canonical: pathname,
+        },
+    };
+}
 
 interface PageProps {
     params: {
@@ -44,7 +59,7 @@ export default function Page({ params }: PageProps) {
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
-                    { title: 'Author', href: '/blog' },
+                    { title: 'Blog', href: '/blog' },
                     { title: title, href: `/author/${params.slug}` },
                 ]}
                 dottable={false}

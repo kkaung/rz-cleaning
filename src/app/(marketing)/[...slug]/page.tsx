@@ -8,7 +8,6 @@ import { absoluteUrl, cn } from '@/lib/utils';
 import { headingVariants } from '@/components/page-header';
 import { Shell } from '@/components/shell';
 
-
 interface PageProps {
     params: {
         slug: string[];
@@ -78,7 +77,6 @@ export default async function PagePage({ params }: PageProps) {
     if (!page) notFound();
 
     return (
-        
         <Shell variant="markdown">
             <div className="space-y-4">
                 <h1 className={cn(headingVariants({}))}>{page.title}</h1>
