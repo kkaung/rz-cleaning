@@ -21,7 +21,7 @@ import { siteConfig } from '@/configs/site';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: `End Of Lease Cleaning Sydney`,
+    title: `End Of Lease Cleaning Sydney - Move Out Cleaning`,
     description: `Professional End of Lease Cleaning Service In Sydney with 100% Bond Back Guarantee. Book online in less than 60 seconds.`,
 };
 
@@ -35,7 +35,6 @@ export default function Page() {
                 <Features />
                 {/* <Checklist /> */}
                 <Gurantee />
-                <Services />
                 <FAQs />
                 <About />
                 <LatestBlog />

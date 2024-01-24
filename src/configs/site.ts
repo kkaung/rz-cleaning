@@ -7,9 +7,9 @@ const links = {
     facebook: 'https://www.facebook.com/profile.php?id=61555684296875',
     instagram: 'https://instagram.com/',
     twitter: 'https://twitter.com/',
-    pinterest: 'https://pinterest.com/',
-    linkin: 'https://linkin.com',
-    youtube: 'https://youtube.com',
+    pinterest: 'https://www.pinterest.com.au/rzcleaning_syd',
+    linkin: 'https://www.linkedin.com/company/rz-cleaning',
+    youtube: 'https://www.youtube.com/channel/UC3Awh2GdY3eWuAxJx7_NtaQ',
 };
 
 export const siteConfig = {
@@ -38,33 +38,28 @@ export const siteConfig = {
     ] satisfies MainNavItem[],
     links,
     footerNav: [
-        // {
-        //     title: 'Services',
-        //     items: [
-        //         {
-        //             title: 'Vacate Cleaning',
-        //             href: '/vacate-cleaning-sydney',
-        //         },
-        //         {
-        //             title: 'Bond Cleaning',
-        //             href: '/bond-cleaning-sydney',
-        //         },
-        //         {
-        //             title: 'Move Out Cleaning',
-        //             href: '/move-out-cleaning-sydney',
-        //         },
-        //     ],
-        // },
         {
-            title: 'Location',
+            title: 'Services',
             items: [
                 {
-                    title: 'Sydney',
-                    href: '/house-cleaning-sydney',
+                    title: 'Bond Cleaning Melbourne',
+                    href: '/bond-cleaning-melbourne',
                 },
                 {
-                    title: 'Melbourne',
-                    href: '/melbourne',
+                    title: 'Bond Cleaning Brisbane',
+                    href: '/bond-cleaning-brisbane',
+                },
+                {
+                    title: 'Bond Cleaning Perth',
+                    href: '/bond-cleaning-perth',
+                },
+                {
+                    title: 'Bond Cleaning Canberra',
+                    href: '/bond-cleaning-canberra',
+                },
+                {
+                    title: 'Bond Cleaning Gold Coast',
+                    href: '/bond-cleaning-gold-coast',
                 },
             ],
         },

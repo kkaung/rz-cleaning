@@ -18,7 +18,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date().toISOString(),
     }));
 
-    const routes = ['', '/pricing', '/blog'].map(route => ({
+    const routes = [
+        '',
+        '/pricing',
+        '/blog',
+        'bond-cleaning-melbourne',
+        'bond-cleaning-canberra',
+        'bond-cleaning-brisbane',
+        'bond-cleaning-gold-coast',
+        'bond-cleaning-perth',
+    ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),
     }));
