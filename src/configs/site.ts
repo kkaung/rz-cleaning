@@ -64,6 +64,31 @@ export const siteConfig = {
             ],
         },
         {
+            title: 'Vacate Cleaning',
+            items: [
+                {
+                    title: 'Vacate Cleaning Sydney',
+                    href: '/vacate-cleaning-sydney',
+                },
+                {
+                    title: 'Vacate Cleaning Brisbane',
+                    href: '/vacate-cleaning-brisbane',
+                },
+                {
+                    title: 'Vacate Cleaning Canberra',
+                    href: '/vacate-cleaning-canberra',
+                },
+                {
+                    title: 'Vacate Cleaning Gold Coast',
+                    href: '/vacate-cleaning-gold-coast',
+                },
+                {
+                    title: 'Vacate Cleaning Perth',
+                    href: '/vacate-cleaning-perth',
+                },
+            ],
+        },
+        {
             title: 'Useful Links',
             items: [
                 { title: 'Contact Us', href: '/contact' },
