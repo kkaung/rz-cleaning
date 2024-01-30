@@ -8,7 +8,7 @@ import { getPathname } from '@/lib/next';
 
 export const runtime = 'edge';
 
-export function generateMetadat(): Metadata {
+export function generateMetadata(): Metadata {
     const pathname = getPathname();
 
     return {
