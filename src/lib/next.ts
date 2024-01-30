@@ -22,3 +22,5 @@ export const getCityFromPath = () => {
         ? cityName
         : 'Australia';
 };
+
+

@@ -25,18 +25,12 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                 <Reviews />
                 <HowWork />
                 <Features />
-                <Gurantee />
+                <Gurantee location={city} />
                 <FAQs />
                 <About />
                 <LatestBlog />
                 <Commitment />
-                <Breadcrumbs
-                    segments={[
-                        { title: 'Home', href: '/' },
-                        { title: 'Bond Cleaning', href: '/' },
-                    ]}
-                    dottable={false}
-                />
+                <Breadcrumbs segments={segments} dottable={false} />
             </Shell>
         </>
     );

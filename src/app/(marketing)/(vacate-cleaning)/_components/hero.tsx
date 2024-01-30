@@ -59,7 +59,7 @@ export default function Hero({ location, ...props }: HeroProps) {
                                     aria-hidden
                                     strokeWidth={3}
                                 />
-                                <p>Vetted & Trusted Cleaners</p>
+                                <p>Vetted & Trusted Vacate Cleaners</p>
                             </div>
                             <div className="flex items-center">
                                 <Icons.check

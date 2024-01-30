@@ -47,7 +47,7 @@ export default function Hero({ location, ...props }: HeroProps) {
                     </CardHeader>
                     <CardContent className="space-y-8 p-0 md:p-6">
                         <p className="text-muted-foreground text-base">
-                            Lowest Price Guarantee Bond Cleaning Service —
+                            Lowest Price Guaranteed Bond Cleaning Service —
                             trusted by thousands of customers across Sydney.
                             Secure the return of your security bond with our
                             thorough bond cleaning service.
@@ -59,7 +59,7 @@ export default function Hero({ location, ...props }: HeroProps) {
                                     aria-hidden
                                     strokeWidth={3}
                                 />
-                                <p>Vetted & Trusted Cleaners</p>
+                                <p>Vetted & Trusted Bond Cleaners</p>
                             </div>
                             <div className="flex items-center">
                                 <Icons.check

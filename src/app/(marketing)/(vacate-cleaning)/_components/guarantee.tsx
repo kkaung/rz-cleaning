@@ -6,9 +6,11 @@ import FeaturedImage from '/public/assets/images/guarantee.jpeg';
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 
-interface GuranteeProps extends HTMLAttributes<HTMLElement> {}
+interface GuranteeProps extends HTMLAttributes<HTMLElement> {
+    location: string;
+}
 
-export default function Gurantee({ ...props }: GuranteeProps) {
+export default function Gurantee({ location, ...props }: GuranteeProps) {
     return (
         <section
             id="gurantee"
@@ -33,10 +35,10 @@ export default function Gurantee({ ...props }: GuranteeProps) {
                     Book your cleaning service with absolute confidence. Our
                     professional end-of-lease cleaning comes with a 100% Bond
                     Return assurance, ensuring peace of mind. Secure your bond
-                    cleaning in Melbourne effortlessly online in just 60
+                    cleaning in {location} effortlessly online in just 60
                     seconds.
                 </p>
-                <Link href="" className={cn(buttonVariants({}))}>
+                <Link href="/booking" className={cn(buttonVariants({}))}>
                     Book My Cleaning
                 </Link>
             </div>
