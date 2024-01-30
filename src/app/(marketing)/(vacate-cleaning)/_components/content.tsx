@@ -7,9 +7,10 @@ import Features from './features';
 import Gurantee from './guarantee';
 import Commitment from '../../_components/commitment';
 import LatestBlog from '../../_components/latest-blog';
-import About from '../../_components/about';
 import Reviews from './reviews';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
+
+import About from '../../_components/about';
 
 interface ContentProps {
     city: string;
@@ -25,7 +26,7 @@ export default function Content({ city, suburb, segments }: ContentProps) {
                 <Reviews />
                 <HowWork />
                 <Features />
-                <Gurantee />
+                <Gurantee location={city} />
                 <FAQs />
                 <About />
                 <LatestBlog />
