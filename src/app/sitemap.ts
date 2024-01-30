@@ -23,12 +23,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/pricing',
         '/blog',
         '/booking',
+        '/frequently-asked-questions',
 
         '/bond-cleaning-melbourne',
         '/bond-cleaning-canberra',
         '/bond-cleaning-brisbane',
         '/bond-cleaning-gold-coast',
         '/bond-cleaning-perth',
+        '/bond-cleaning-adeliade',
 
         '/vacate-cleaning-sydney',
         '/vacate-cleaning-canberra',
@@ -36,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/vacate-cleaning-canberra',
         '/vacate-cleaning-gold-coast',
         '/vacate-cleaning-perth',
-        
+        '/vacate-cleaning-adeliade',
     ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),

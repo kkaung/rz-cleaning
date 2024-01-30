@@ -12,6 +12,8 @@ import Dot from '@/components/dot';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
+import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
+import { getPathname } from '@/lib/next';
 
 interface PostPageProps {
     params: {
@@ -33,6 +35,8 @@ export async function generateMetadata({
 }: PostPageProps): Promise<Metadata> {
     const post = await getPostFromParams(params);
 
+    const pathname = getPathname();
+
     if (!post) return {};
 
     const url = env.NEXT_PUBLIC_APP_URL;
@@ -46,6 +50,9 @@ export async function generateMetadata({
         title: post.title,
         description: post.description,
         authors: [],
+        alternates: {
+            canonical: pathname,
+        },
         openGraph: {
             title: post.title,
             description: post.description,
@@ -196,6 +203,14 @@ export default async function PostPage({ params }: PostPageProps) {
                     </CardContent>
                 </Card>
             </section>
+            <Breadcrumbs
+                segments={[
+                    { title: 'Home', href: '/' },
+                    { title: 'Blog', href: '/blog' },
+                ]}
+                dottable={false}
+                className="mt-12"
+            />
             <div className="flex justify-center py-6 lg:py-10">
                 <Link
                     href="/blog"

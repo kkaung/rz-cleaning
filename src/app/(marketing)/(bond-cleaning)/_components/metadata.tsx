@@ -6,7 +6,7 @@ export const getMetadata = (location: string): Metadata => {
 
     return {
         title: `End Of Lease Cleaning ${location} - Bond Cleaning`,
-        description: `Professional End of Lease Cleaning Service In ${location} with 100% Bond Back Guarantee. Book online inless than 60 seconds.`,
+        description: `Professional End of Lease Cleaning Service In ${location} with 100% Bond Back Guarantee and the Lowest Price Guaranteed. Book online inless than 60 seconds.`,
         alternates: {
             canonical: pathname,
         },

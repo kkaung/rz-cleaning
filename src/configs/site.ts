@@ -39,7 +39,7 @@ export const siteConfig = {
     links,
     footerNav: [
         {
-            title: 'Services',
+            title: 'Bond Cleaning',
             items: [
                 {
                     title: 'Bond Cleaning Melbourne',
@@ -60,6 +60,10 @@ export const siteConfig = {
                 {
                     title: 'Bond Cleaning Gold Coast',
                     href: '/bond-cleaning-gold-coast',
+                },
+                {
+                    title: 'Bond Cleaning Adelaide',
+                    href: '/bond-cleaning-adelaide',
                 },
             ],
         },
@@ -85,6 +89,10 @@ export const siteConfig = {
                 {
                     title: 'Vacate Cleaning Perth',
                     href: '/vacate-cleaning-perth',
+                },
+                {
+                    title: 'Vacate Cleaning Adelaide',
+                    href: '/vacate-cleaning-adelaide',
                 },
             ],
         },

@@ -7,6 +7,8 @@ import { siteConfig } from '@/configs/site';
 import { absoluteUrl, cn } from '@/lib/utils';
 import { headingVariants } from '@/components/page-header';
 import { Shell } from '@/components/shell';
+import { MdxPager } from '@/components/pagers/mdx-pager';
+import { getPathname } from '@/lib/next';
 
 interface PageProps {
     params: {
@@ -28,6 +30,8 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
     const page = await getPageFromParams(params);
 
+    const pathname = getPathname();
+
     if (!page) {
         return {};
     }
@@ -42,6 +46,9 @@ export async function generateMetadata({
     return {
         title: page.title,
         description: page.description,
+        alternates: {
+            canonical: pathname,
+        },
         openGraph: {
             title: page.title,
             description: page.description,
@@ -76,6 +83,16 @@ export default async function PagePage({ params }: PageProps) {
 
     if (!page) notFound();
 
+    const formattedPage = {
+        ...page,
+        slug: page.slug.replace(/^\/pages/, ''),
+    };
+
+    const formattedPages = allPages.map(page => ({
+        ...page,
+        slug: page.slug.replace(/^\/pages/, ''),
+    }));
+
     return (
         <Shell variant="markdown">
             <div className="space-y-4">
@@ -88,6 +105,11 @@ export default async function PagePage({ params }: PageProps) {
             </div>
             <hr className="my-4" />
             <Mdx code={page.body.code} />
+            <MdxPager
+                currentItem={formattedPage}
+                allItems={formattedPages}
+                className="my-4"
+            />
         </Shell>
     );
 }

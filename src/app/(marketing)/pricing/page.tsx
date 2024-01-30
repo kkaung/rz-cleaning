@@ -62,17 +62,31 @@ export default function Page() {
     return (
         <Shell>
             <PageHeader className="text-center">
-                <PageHeaderHeading>End Of Lease Pricing</PageHeaderHeading>
+                <PageHeaderHeading>
+                    End Of Lease Cleaning Pricing
+                </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto mt-6">
-                    You might recognise it as bond cleaning, end of lease
-                    cleaning, or vacate cleaning. It’s all one and the same for
-                    us. See below a detailed list of our end of cleaning service
-                    prices. At
-                    <Link href="/" className="underline mx-1">
-                        {siteConfig.name}
+                    You might recognise it as
+                    <Link
+                        href="/bond-cleaning-melbourne"
+                        className="underline mx-1"
+                    >
+                        bond cleaning
                     </Link>
-                    , our prices are super affordable and will not break the
-                    bank.
+                    ,
+                    <Link href="/" className="underline mx-1">
+                        end of lease cleaning
+                    </Link>
+                    , or
+                    <Link
+                        href="/vacate-clenaing-sydney"
+                        className="underline mx-1"
+                    >
+                        vacate cleaning
+                    </Link>
+                    . It’s all one and the same for us. See below a detailed
+                    list of our end of cleaning service prices. At RZ Cleaning,
+                    our prices are super affordable and will not break the bank.
                 </PageHeaderDescription>
             </PageHeader>
             <section className="broder max-w-xl mx-auto w-full">
