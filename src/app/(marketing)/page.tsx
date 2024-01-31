@@ -30,7 +30,7 @@ export default function Page() {
         <>
             <Shell>
                 <Hero />
-                <Reviews />
+                <Reviews location="Sydney" />
                 <HowWork />
                 <Features />
                 {/* <Checklist /> */}
@@ -50,7 +50,13 @@ export default function Page() {
                 legalName={siteConfig.name}
                 url={absoluteUrl('')}
                 logo={absoluteUrl('/')}
-                sameAs={[siteConfig.links.facebook, siteConfig.links.linkin]}
+                sameAs={[
+                    siteConfig.links.facebook,
+                    siteConfig.links.linkin,
+                    siteConfig.links.instagram,
+                    siteConfig.links.twitter,
+                    siteConfig.links.youtube,
+                ]}
                 address={{
                     streetAddress: '101/ 761 - 763 George St Haymarket',
                     addressLocality: 'Sydney',

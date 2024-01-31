@@ -65,7 +65,6 @@ export default function HowWork({ ...props }: HowWorkProps) {
                             height={150}
                             src={YouRelaxImage}
                             alt="Book Online"
-                            className="mx-auto"
                         />
                         <div className="space-y-3">
                             <p className="font-semibold text-lg">

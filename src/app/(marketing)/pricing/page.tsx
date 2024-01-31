@@ -3,6 +3,7 @@ import {
     PageHeaderDescription,
     PageHeaderHeading,
 } from '@/components/page-header';
+import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
 import {
     Table,
@@ -22,7 +23,7 @@ import React from 'react';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: 'End Of Lease - Bond Cleaning Pricing ',
+    title: 'End Of Lease - Bond Cleaning Pricin ',
     description:
         'Check our detailed cleaning pricing list. Professional & reliable service, 100% satisfaction guarantee. Book online in 60 seconds.',
 };
@@ -61,6 +62,13 @@ const pricingList = [
 export default function Page() {
     return (
         <Shell>
+            <Breadcrumbs
+                segments={[
+                    { title: 'Home', href: '/' },
+                    { title: 'Pricing', href: '/pricing' },
+                ]}
+                dottable={false}
+            />
             <PageHeader className="text-center">
                 <PageHeaderHeading>
                     End Of Lease Cleaning Pricing

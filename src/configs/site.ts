@@ -4,9 +4,9 @@ import type { FooterItem, MainNavItem } from '@/types';
 export type SiteConfig = typeof siteConfig;
 
 const links = {
-    facebook: 'https://www.facebook.com/profile.php?id=61555684296875',
-    instagram: 'https://instagram.com/',
-    twitter: 'https://twitter.com/',
+    facebook: 'https://www.facebook.com/people/RZ-Cleaning/61555684296875/',
+    instagram: 'https://instagram.com/rzcleaning_au',
+    twitter: 'https://twitter.com/rzclenaing_au',
     pinterest: 'https://www.pinterest.com.au/rzcleaning_syd',
     linkin: 'https://www.linkedin.com/company/rz-cleaning',
     youtube: 'https://www.youtube.com/channel/UC3Awh2GdY3eWuAxJx7_NtaQ',
@@ -20,17 +20,6 @@ export const siteConfig = {
     url: 'https://rzcleaning.com.au',
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
     mainNav: [
-        // {
-        //     title: 'Services',
-        //     items: [
-        //         { title: 'Vacate Cleaning', href: '/vacate-cleaning-sydney' },
-        //         { title: 'Bond Cleaning', href: '/bond-cleaning-sydney' },
-        //         {
-        //             title: 'Move Out Cleaning',
-        //             href: '/move-out-cleaning-sydney',
-        //         },
-        //     ],
-        // },
         {
             title: 'Pricing',
             href: '/pricing',
@@ -103,7 +92,7 @@ export const siteConfig = {
                 { title: 'About Us', href: '/about' },
                 { title: 'Blog', href: '/blog' },
                 { title: 'Pricing', href: '/pricing' },
-                { title: 'Checklist', href: '/checklist' },
+                { title: 'Checklist', href: '/bond-cleaning-checklist' },
                 { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },
