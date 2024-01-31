@@ -46,7 +46,7 @@ export default function HowWork({ ...props }: HowWorkProps) {
                             width={150}
                             height={150}
                             src={WeCleanImage}
-                            className="mx-auto"
+                            className="md:mx-auto"
                             alt="We Clean"
                         />
                         <div className="space-y-3">
@@ -65,7 +65,7 @@ export default function HowWork({ ...props }: HowWorkProps) {
                             height={150}
                             src={YouRelaxImage}
                             alt="Book Online"
-                            className="mx-auto"
+                            className="md:mx-auto"
                         />
                         <div className="space-y-3">
                             <p className="font-semibold text-lg">
