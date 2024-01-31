@@ -64,6 +64,10 @@ export const siteConfig = {
                     href: '/vacate-cleaning-sydney',
                 },
                 {
+                    title: 'Vacate Cleaning Melbourne',
+                    href: '/vacate-cleaning-melbourne',
+                },
+                {
                     title: 'Vacate Cleaning Brisbane',
                     href: '/vacate-cleaning-brisbane',
                 },
@@ -100,10 +104,10 @@ export const siteConfig = {
         },
     ] satisfies FooterItem[],
     business: {
-        email: 'contact@majormaid.com.au',
+        email: 'contact@rzcleaning.com.au',
         phone: '1300 245 417',
-        address: '7/24-26 Blaxland Road, Ryde, NSW 2112',
-        openingHour: 'Mon – Sat: 9:00 AM – 5:00 PM',
+        address: '401/249 George St, 2017 NSW',
+        openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
     },
     rating: {
         ratingValue: '4.9',

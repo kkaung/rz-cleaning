@@ -33,6 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/bond-cleaning-adeliade',
 
         '/vacate-cleaning-sydney',
+        '/vacate-cleaning-melbourne',
         '/vacate-cleaning-canberra',
         '/vacate-cleaning-brisbane',
         '/vacate-cleaning-canberra',

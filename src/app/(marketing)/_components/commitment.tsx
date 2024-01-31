@@ -1,4 +1,5 @@
 import { headingVariants } from '@/components/page-header';
+import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
@@ -18,13 +19,19 @@ export default function Commitment({ ...props }: CommitmentProps) {
             {...props}
         >
             <h3 className={headingVariants({ size: 'sm' })}>
-                <Balancer>
-                    200% Customer Satisfaction, <br /> Our Commitment
-                </Balancer>
+                <Balancer>200% Customer Satisfaction, Our Commitment</Balancer>
             </h3>
             <p className="text-lg">
                 If you’re not happy with our work, we make it right!
             </p>
+            <div>
+                <Link
+                    href="/book-now"
+                    className={cn(buttonVariants({ size: 'lg' }))}
+                >
+                    Book Now
+                </Link>
+            </div>
         </section>
     );
 }
