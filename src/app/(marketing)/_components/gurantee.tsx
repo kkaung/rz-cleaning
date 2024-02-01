@@ -22,7 +22,7 @@ export default function Gurantee({ ...props }: GuranteeProps) {
                 width={500}
                 height={500}
                 src={FeaturedImage}
-                alt=""
+                alt="Bond Cleaner"
                 className="rounded-xl hidden md:block"
             />
             <div className="flex-1 space-y-4">
@@ -35,8 +35,8 @@ export default function Gurantee({ ...props }: GuranteeProps) {
                     Return assurance, ensuring peace of mind. Secure your bond
                     cleaning in Sydney effortlessly online in just 60 seconds.
                 </p>
-                <Link href="" className={cn(buttonVariants({}))}>
-                    Book My Cleaning
+                <Link href="/booking" className={cn(buttonVariants({}))}>
+                    Book My Bond Cleaning
                 </Link>
             </div>
         </section>

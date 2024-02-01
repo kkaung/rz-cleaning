@@ -24,7 +24,7 @@ export default function Gurantee({ location, ...props }: GuranteeProps) {
                 width={500}
                 height={500}
                 src={FeaturedImage}
-                alt=""
+                alt="Bond Cleaner"
                 className="rounded-xl hidden md:block"
             />
             <div className="flex-1 space-y-4">
@@ -39,7 +39,7 @@ export default function Gurantee({ location, ...props }: GuranteeProps) {
                     seconds.
                 </p>
                 <Link href="/booking" className={cn(buttonVariants({}))}>
-                    Book My Cleaning
+                    Book My Bond Cleaning
                 </Link>
             </div>
         </section>

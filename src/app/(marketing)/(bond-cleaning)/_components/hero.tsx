@@ -75,7 +75,10 @@ export default function Hero({ location, ...props }: HeroProps) {
                                     aria-hidden
                                     strokeWidth={3}
                                 />
-                                <p>Trusted by 1000+ monthly movers in Sydney</p>
+                                <p>
+                                    Trusted by 1000+ monthly movers in
+                                    <span className="ml-1">{location}</span>
+                                </p>
                             </div>
                         </div>
                         <div className="flex gap-1 items-center text-sm">
