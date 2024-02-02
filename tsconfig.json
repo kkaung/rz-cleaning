@@ -28,8 +28,7 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "contentlayer.config.js",
-        "next-sitemap.config.js"
+        "contentlayer.config.js"
     ],
     "exclude": ["node_modules"]
 }

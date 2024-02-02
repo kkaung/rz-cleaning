@@ -15,8 +15,9 @@ import Gurantee from './_components/gurantee';
 import LatestBlog from './_components/latest-blog';
 import About from './_components/about';
 import Commitment from './_components/commitment';
-import { absoluteUrl } from '@/lib/utils';
+import { absoluteUrl, cn } from '@/lib/utils';
 import { siteConfig } from '@/configs/site';
+import { headingVariants } from '@/components/page-header';
 
 export const runtime = 'edge';
 
@@ -39,6 +40,11 @@ export default function Page() {
                 <About />
                 <LatestBlog />
                 {/* <Suburbs /> */}
+                <section className="bg-secondary p-12">
+                    <h2 className={cn(headingVariants({}))}>
+                        Find Local Bond Cleaner
+                    </h2>
+                </section>
                 <Commitment />
             </Shell>
             <OrganizationJsonLd

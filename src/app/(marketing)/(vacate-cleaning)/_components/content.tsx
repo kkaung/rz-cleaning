@@ -5,11 +5,11 @@ import HowWork from './how-work';
 import FAQs from './faqs';
 import Features from './features';
 import Gurantee from './guarantee';
-import Commitment from '../../_components/commitment';
-import LatestBlog from '../../_components/latest-blog';
 import Reviews from './reviews';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 
+import Commitment from '../../_components/commitment';
+import LatestBlog from '../../_components/latest-blog';
 import About from '../../_components/about';
 
 interface ContentProps {

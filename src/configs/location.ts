@@ -736,3 +736,12 @@ export const locations = [
         ],
     },
 ];
+
+export const cities = [
+    'Sydney',
+    'Melbourne',
+    'Brisbane',
+    'Perth',
+    'Canberra',
+    'Gold Coast',
+];

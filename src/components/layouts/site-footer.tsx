@@ -157,6 +157,14 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
                         </Link>
+                        <Link
+                            aria-label="Pinterest"
+                            target="_blank"
+                            href="https://bondtoclean.com.au"
+                            title="BondToClean - Bond Cleaning Service in Australia"
+                        >
+                            <Icons.sparkles aria-hidden className="h-4 w-4" />
+                        </Link>
                     </div>
                 </section>
             </Shell>
