@@ -99,6 +99,8 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                     </section>
                 </section>
                 <Separator />
+                <FooterTabs />
+                <Separator />
                 <section
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"

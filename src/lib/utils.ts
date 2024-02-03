@@ -22,6 +22,8 @@ export function toTitleCase(str: string) {
 }
 
 export function unslugify(str: string) {
+    str = str.replace(/^\//, '');
+
     return str.replace(/-/g, ' ');
 }
 

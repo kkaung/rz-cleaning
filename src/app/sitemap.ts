@@ -1,6 +1,7 @@
 import { type MetadataRoute } from 'next';
 import { absoluteUrl } from '@/lib/utils';
 import { allPosts, allPages, allAuthors } from 'contentlayer/generated';
+import { locations } from '@/configs/location';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const pagesRoutes = allPages.map(page => ({
@@ -17,6 +18,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: absoluteUrl(`${post.slug}`),
         lastModified: new Date().toISOString(),
     }));
+
+    const allSuburbs = locations.flatMap(location => location.items);
+
+    const bondCleaningRoutes: any[] = [];
+
+    locations.forEach(city => {
+        const cityName = city.title.toLowerCase();
+        const cityRoutes = city.items.map(suburb => ({
+            url: absoluteUrl(`/bond-cleaning-${cityName}/${suburb.slug}`),
+            lastModified: new Date().toISOString(),
+        }));
+
+        bondCleaningRoutes.push(...cityRoutes);
+    });
 
     const routes = [
         '',
@@ -46,5 +61,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date().toISOString(),
     }));
 
-    return [...routes, ...pagesRoutes, ...postsRoutes, ...authorsRoutes];
+    return [
+        ...routes,
+        ...pagesRoutes,
+        ...postsRoutes,
+        ...authorsRoutes,
+        ...bondCleaningRoutes,
+    ];
 }

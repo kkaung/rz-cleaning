@@ -14,6 +14,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { getPathname } from '@/lib/next';
+import { cities } from '@/configs/location';
 
 interface PostPageProps {
     params: {
@@ -160,7 +161,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
             )}
             <Mdx code={post.body.code} />
-            <section className="mt-8">
+            <section className="my-8">
                 <Card className="border-0 bg-secondary/50 rounded-xl">
                     <CardHeader>
                         <div className="flex gap-4">
@@ -190,18 +191,48 @@ export default async function PostPage({ params }: PostPageProps) {
                     <CardContent className="space-y-4 text-foreground">
                         <p className="text-foreground">{author.description}</p>
                         <div className="flex gap-4">
-                            <Link aria-label="Linkin" target="_blank" href="/">
+                            <Link
+                                aria-label="Linkin"
+                                target="_blank"
+                                href={`https://www.linkedin.com/in/${author.linkin}`}
+                            >
                                 <Icons.linkin aria-hidden className="h-4 w-4" />
-                            </Link>
-                            <Link aria-label="Linkin" target="_blank" href="/">
-                                <Icons.twitter
-                                    aria-hidden
-                                    className="h-4 w-4"
-                                />
                             </Link>
                         </div>
                     </CardContent>
                 </Card>
+            </section>
+            <section
+                id="bond-cleaners"
+                className="bg-secondary p-6 rounded-lg space-y-4"
+            >
+                <div className="space-y-2">
+                    <h3 className="font-semibold text-lg">
+                        Find bond cleaners in your city
+                    </h3>
+                    <p className="text-sm">
+                        BondToClean&apos;s network of verified local cleaners
+                        operates Australia-wide. Choose your city and get
+                        started now.
+                    </p>
+                </div>
+                <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-foreground/80 text-sm sm:grid-cols-2 md:grid-cols-3">
+                    {cities.map((city, idx) => (
+                        <li key={idx} className="group">
+                            <Link
+                                href={`/bond-cleaning-${city.toLowerCase()}`}
+                                className="hover:underline"
+                                title={`Bond Cleaner ${city}`}
+                            >
+                                <Icons.mapPin
+                                    className="w-4 h-4 inline mr-1 text-foreground/80"
+                                    aria-hidden
+                                />
+                                <span>Bond Cleaner {city}</span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
             </section>
             <Breadcrumbs
                 segments={[
