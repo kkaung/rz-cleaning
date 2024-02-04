@@ -23,22 +23,114 @@ export default function Checklist({ ...props }: ChecklistProps) {
             value: 'kitchen',
             items: [
                 { title: 'Clean oven inside & outside (including trays)' },
-                { title: 'Clean and descale shower screen and tiles' },
+                { title: 'Clean inside and outside built-in microwave' },
+                { title: 'Clean cooktop & grill' },
+                { title: 'Clean range-hood & filter' },
+                { title: 'Clean bench top surfaces & splashback' },
+                { title: 'Clean sink, taps & handles' },
+                {
+                    title: 'Clean inside & outside cabinets & drawers. Including top of cabinets',
+                },
+                {
+                    title: 'Dust and remove cobwebs',
+                },
+                {
+                    title: 'Vacuum and mop floors',
+                },
+                {
+                    title: 'Clean outside dishwasher & handles',
+                },
+                {
+                    title: 'Clean windows, sills & tracks (internally)',
+                },
+                {
+                    title: 'Scrub & clean skirting boards',
+                },
+                {
+                    title: 'Clean and dust lighting, switches, and fixtures.',
+                },
+                {
+                    title: 'Spot clean walls',
+                },
             ],
         },
         {
             title: 'Bathroom & Toilet:',
             value: 'bathroom-and-toilet',
-            items: [{ title: 'Vacuum and mop floors' }],
+            items: [
+                { title: 'Vacuum and mop floors' },
+                {
+                    title: 'Vacuum and mop floors',
+                },
+                {
+                    title: 'Clean and descale shower screen and tiles',
+                },
+                {
+                    title: 'Clean & dust exhaust fans & air vents',
+                },
+                {
+                    title: 'Clean windows sills and tracks (internally)',
+                },
+                {
+                    title: 'Clean toilet inside and outside',
+                },
+                {
+                    title: 'Clean mirrors and wipe all counters',
+                },
+                {
+                    title: 'Clean basin & bathtub (including taps & handles)',
+                },
+                {
+                    title: 'Clean vanity (including taps & handles)',
+                },
+                {
+                    title: 'Scrub & clean skirting boards',
+                },
+                {
+                    title: 'Clean and dust lighting, switches, and fixtures',
+                },
+                {
+                    title: 'Clean inside & outside cabinets & drawers',
+                },
+                {
+                    title: 'Wipe clean doors and door frames',
+                },
+                {
+                    title: 'Dust and remove cobwebs',
+                },
+                {
+                    title: 'Scrub mineral deposits & mould',
+                },
+            ],
         },
         {
             title: 'Entry & Hallway',
             value: 'entry-and-hallway',
-            items: [{ title: 'Vacuum and mop floor' }],
+            items: [
+                { title: 'Vacuum and mop floor' },
+                { title: 'Scrub & clean skirting boards' },
+                { title: 'Clean and dust lighting, switches, and fixtures' },
+                { title: 'Spot clean walls' },
+                { title: 'Dust and remove cobwebs' },
+                { title: 'Wipe clean doors and door frames' },
+            ],
         },
         {
             title: 'Laundary',
             value: 'launday',
+            items: [
+                { title: 'Vacuum and mop floor' },
+                { title: 'Scrub & clean skirting boards' },
+            ],
+        },
+        {
+            title: 'Bedroom',
+            value: 'bedroom',
+            items: [{ title: 'Vacuum and mop floor' }],
+        },
+        {
+            title: 'Living & Diving',
+            value: 'living-and-diving',
             items: [{ title: 'Vacuum and mop floor' }],
         },
     ];
