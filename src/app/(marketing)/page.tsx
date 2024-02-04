@@ -9,15 +9,15 @@ import Services from './_components/services';
 import Reviews from './_components/reviews';
 import FAQs from './_components/faqs';
 import Checklist from './_components/checklist';
-import Suburbs from './_components/suburbs';
 import Features from './_components/features';
 import Gurantee from './_components/gurantee';
 import LatestBlog from './_components/latest-blog';
 import About from './_components/about';
 import Commitment from './_components/commitment';
-import { absoluteUrl, cn } from '@/lib/utils';
+import { absoluteUrl } from '@/lib/utils';
 import { siteConfig } from '@/configs/site';
-import { headingVariants } from '@/components/page-header';
+import Featured from './_components/featuring';
+import Featuring from './_components/featuring';
 
 export const runtime = 'edge';
 
@@ -34,17 +34,12 @@ export default function Page() {
                 <Reviews location="Sydney" />
                 <HowWork />
                 <Features />
-                {/* <Checklist /> */}
+                <Checklist />
                 <Gurantee />
                 <FAQs />
                 <About />
                 <LatestBlog />
                 {/* <Suburbs /> */}
-                <section className="bg-secondary p-12">
-                    <h2 className={cn(headingVariants({}))}>
-                        Find Local Bond Cleaner
-                    </h2>
-                </section>
                 <Commitment />
             </Shell>
             <OrganizationJsonLd

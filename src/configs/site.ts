@@ -10,6 +10,8 @@ const links = {
     pinterest: 'https://www.pinterest.com.au/rzcleaning_syd',
     linkin: 'https://www.linkedin.com/company/rz-cleaning',
     youtube: 'https://www.youtube.com/channel/UC3Awh2GdY3eWuAxJx7_NtaQ',
+    googlemap: '',
+    yelp: 'https://www.yelp.com/biz/rz-cleaning-waterloo',
 };
 
 export const siteConfig = {

@@ -1,65 +1,97 @@
+'use client';
+
 import { Icons } from '@/components/icons';
 import { headingVariants } from '@/components/page-header';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from '@/components/ui/accordion';
+import { siteConfig } from '@/configs/site';
 import { cn } from '@/lib/utils';
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, useState } from 'react';
 
 interface ChecklistProps extends HTMLAttributes<HTMLElement> {}
 
 export default function Checklist({ ...props }: ChecklistProps) {
+    const [tab, setTab] = useState('');
+
+    const tabs = [
+        {
+            title: 'Kitchen',
+            value: 'kitchen',
+            items: [
+                { title: 'Clean oven inside & outside (including trays)' },
+                { title: 'Clean and descale shower screen and tiles' },
+            ],
+        },
+        {
+            title: 'Bathroom & Toilet:',
+            value: 'bathroom-and-toilet',
+            items: [{ title: 'Vacuum and mop floors' }],
+        },
+        {
+            title: 'Entry & Hallway',
+            value: 'entry-and-hallway',
+            items: [{ title: 'Vacuum and mop floor' }],
+        },
+        {
+            title: 'Laundary',
+            value: 'launday',
+            items: [{ title: 'Vacuum and mop floor' }],
+        },
+    ];
+
     return (
         <section
             id="checklists"
             aria-labelledby="checklists-heading"
-            className={cn(props.className, 'p-12 space-y-12 bg-secondary')}
+            className={cn(props.className, 'py-12 space-y-12')}
             {...props}
         >
             <div className="space-y-1">
                 <p className="text-pink-500 uppercase font-medium">
                     What&apos;s Included
                 </p>
-                <h2 className={headingVariants({})}>Bond Cleaning Checklist</h2>
+                <h2 className={headingVariants({})}>
+                    {siteConfig.name}&apos;s Bond Cleaning Checklist
+                </h2>
             </div>
-            <Tabs
-                defaultValue="account"
-                orientation="horizontal"
-                className="flex gap-12"
-            >
-                <TabsList className="bg-transparent flex flex-col text-left basis-1/3">
-                    <TabsTrigger value="account" className="w-full">
-                        <div>
-                            01.
-                            <span className="text-lg font-semibold ml-3">
-                                Entry / Hallway
-                            </span>
-                        </div>
-                        <Icons.arrowRight className="w-4 h-4" />
-                    </TabsTrigger>
-                    <TabsTrigger value="password">
-                        <div>
-                            02.
-                            <span className="text-lg font-semibold ml-3">
-                                Laundry
-                            </span>
-                        </div>
-                    </TabsTrigger>
-                </TabsList>
-                <TabsContent value="account">
-                    <ul>
-                        <li className="flex items-center">
-                            <Icons.check
-                                className="w-4 h-4 mr-2"
-                                strokeWidth={3}
-                                aria-hidden
-                            />
-                            <p>Wipe down skirting boards</p>
-                        </li>
-                    </ul>
-                </TabsContent>
-                <TabsContent value="password">
-                    Change your password here.
-                </TabsContent>
-            </Tabs>
+            <div>
+                <Accordion
+                    type="single"
+                    collapsible
+                    value={tab}
+                    onValueChange={setTab}
+                    className={cn(
+                        props.className,
+                        'grid grid-cols-1 gap-6 md:grid-cols-2'
+                    )}
+                >
+                    {tabs.map(t => (
+                        <AccordionItem
+                            key={t.value}
+                            value={t.value}
+                            className="border"
+                        >
+                            <AccordionTrigger className="px-4">
+                                {t.title}
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4">
+                                <ul className="space-y-1">
+                                    {t.items.map(i => (
+                                        <li key={i.title}>
+                                            <Icons.check className="w-4 h-4 inline mr-1" />
+                                            <span>{i.title}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
+            </div>
         </section>
     );
 }

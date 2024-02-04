@@ -160,7 +160,14 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
-                            aria-label="Pinterest"
+                            aria-label="Yelp"
+                            target="_blank"
+                            href={siteConfig.links.yelp}
+                            rel="nofollow"
+                        >
+                            <Icons.yelp aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
                             target="_blank"
                             href="https://bondtoclean.com.au"
                             title="BondToClean - Bond Cleaning Service in Australia"

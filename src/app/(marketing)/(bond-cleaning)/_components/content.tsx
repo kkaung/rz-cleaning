@@ -6,10 +6,11 @@ import FAQs from './faqs';
 import Reviews from './reviews';
 import Features from './features';
 import Gurantee from './guarantee';
+import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
+
 import Commitment from '../../_components/commitment';
 import LatestBlog from '../../_components/latest-blog';
 import About from '../../_components/about';
-import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 
 interface ContentProps {
     city: string;
