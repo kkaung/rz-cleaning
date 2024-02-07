@@ -119,6 +119,32 @@ export const locations = [
             { title: 'West Leederville', slug: 'west-leederville' },
         ],
     },
+    {
+        title: 'Canberra',
+        meta: {},
+        items: [
+            { title: 'Barton', slug: 'barton' },
+            { title: 'Bonner', slug: 'bonner' },
+            { title: 'Braddon', slug: 'braddon' },
+            { title: 'Bruce', slug: 'bruce' },
+            { title: 'Calwell', slug: 'calwell' },
+            { title: 'Campbell', slug: 'campbell' },
+            { title: 'Crace', slug: 'crace' },
+            { title: 'Forrest', slug: 'forrest' },
+            { title: 'Franklin', slug: 'franklin' },
+            { title: 'Greenway', slug: 'greenway' },
+            { title: 'Griffith', slug: 'griffith' },
+            { title: 'Harrison', slug: 'harrison' },
+            { title: 'Kambah', slug: 'kambah' },
+            { title: 'Kingston', slug: 'kingston' },
+            { title: 'Lyneham', slug: 'lyneham' },
+            { title: 'Macgregor', slug: 'macgregor' },
+            { title: 'Ngunnawal', slug: 'ngunnawal' },
+            { title: 'Phillip', slug: 'phillip' },
+            { title: 'Turner', slug: 'turner' },
+            { title: 'Watson', slug: 'watson' },
+        ],
+    },
 ];
 
 export const cities = [

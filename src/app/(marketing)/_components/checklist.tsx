@@ -165,7 +165,7 @@ export default function Checklist({ ...props }: ChecklistProps) {
                         <AccordionItem
                             key={t.value}
                             value={t.value}
-                            className="border"
+                            className="border rounded-lg"
                         >
                             <AccordionTrigger className="px-4">
                                 {t.title}
