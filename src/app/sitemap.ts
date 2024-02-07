@@ -41,6 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/frequently-asked-questions',
         '/bond-cleaning-checklist',
 
+        '/bond-cleaning-sydney',
         '/bond-cleaning-melbourne',
         '/bond-cleaning-canberra',
         '/bond-cleaning-brisbane',
