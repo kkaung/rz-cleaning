@@ -16,7 +16,6 @@ import About from './_components/about';
 import Commitment from './_components/commitment';
 import { absoluteUrl } from '@/lib/utils';
 import { siteConfig } from '@/configs/site';
-import Featured from './_components/featuring';
 import Featuring from './_components/featuring';
 
 export const runtime = 'edge';

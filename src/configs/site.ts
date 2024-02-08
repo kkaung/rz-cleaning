@@ -11,6 +11,8 @@ const links = {
     linkin: 'https://www.linkedin.com/company/rz-cleaning',
     youtube: 'https://www.youtube.com/channel/UC3Awh2GdY3eWuAxJx7_NtaQ',
     googlemap: '',
+
+    buynsw: 'https://buy.nsw.gov.au/supplier/profile/160972',
     yelp: 'https://www.yelp.com/biz/rz-cleaning-waterloo',
 };
 
