@@ -8,13 +8,14 @@ import { env } from '@/env.mjs';
 import { absoluteUrl, cn, formatDate } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
-import Dot from '@/components/dot';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { getPathname } from '@/lib/next';
 import { cities } from '@/configs/location';
+
+import Dot from '@/components/dot';
 
 interface PostPageProps {
     params: {
@@ -47,10 +48,19 @@ export async function generateMetadata({
     ogUrl.searchParams.set('type', 'Blog Post');
     ogUrl.searchParams.set('mode', 'dark');
 
+    const author = allAuthors.find(
+        author => author.slugAsParams === post.author
+    ) as Author;
+
     return {
         title: post.title,
         description: post.description,
-        authors: [],
+        authors: [
+            {
+                name: author.title,
+                url: absoluteUrl(`/authors/${author.slugAsParams}`),
+            },
+        ],
         alternates: {
             canonical: pathname,
         },
@@ -204,7 +214,7 @@ export default async function PostPage({ params }: PostPageProps) {
             </section>
             <section
                 id="bond-cleaners"
-                className="bg-secondary p-6 rounded-lg space-y-4"
+                className="bg-secondary/50 p-6 rounded-lg space-y-4"
             >
                 <div className="space-y-2">
                     <h3 className="font-semibold text-lg">

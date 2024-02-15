@@ -79,9 +79,9 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
-                                <h4 className="text-base font-medium">
+                                <div className="text-base font-medium">
                                     {item.title}
-                                </h4>
+                                </div>
                                 <ul className="space-y-2">
                                     {item.items.map(link => (
                                         <li key={link.title}>
