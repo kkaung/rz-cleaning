@@ -111,7 +111,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         © {new Date().getFullYear()} {siteConfig.name}.
                         <span>All rights reserved.</span>
                     </div>
-                    <div className="mt-3 flex items-center gap-6">
+                    <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
                         <Link
                             aria-label="Facebook"
                             target="_blank"
@@ -185,10 +185,20 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         </Link>
                         <Link
                             target="_blank"
-                            href="https://bondtoclean.com.au"
-                            title="BondToClean - Bond Cleaning Service in Australia"
+                            href={siteConfig.links.bondtoclean}
+                            title="Bond Cleaning Service in Brisbane"
                         >
                             <Icons.sparkles aria-hidden className="h-4 w-4" />
+                        </Link>
+                        <Link
+                            target="_blank"
+                            href={siteConfig.links.bondcleaningsydney}
+                            title="End Of Lease Cleaning Service In Sydney"
+                        >
+                            <Icons.personStanding
+                                aria-hidden
+                                className="h-4 w-4"
+                            />
                         </Link>
                     </div>
                 </section>

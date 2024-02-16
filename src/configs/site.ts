@@ -14,6 +14,10 @@ const links = {
 
     buynsw: 'https://buy.nsw.gov.au/supplier/profile/160972',
     yelp: 'https://www.yelp.com/biz/rz-cleaning-waterloo',
+
+    bondtoclean: 'https://bondtoclean.com.au/bond-cleaning-brisbane',
+    bondcleaningsydney:
+        'https://end-of-lease-bond-vacate-cleaning-sydney.com.au',
 };
 
 export const siteConfig = {
@@ -25,7 +29,7 @@ export const siteConfig = {
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
     mainNav: [
         {
-            title: 'Where We Clean',
+            title: 'Location',
             items: [
                 { title: 'Sydney', href: '/bond-cleaning-sydney' },
                 { title: 'Melbourne', href: '/bond-cleaning-melbourne' },
@@ -34,6 +38,14 @@ export const siteConfig = {
                 { title: 'Adelaide', href: '/bond-cleaning-adelaide' },
                 { title: 'Canberra', href: '/bond-cleaning-canberra' },
                 { title: 'Gold Coast', href: '/bond-cleaning-gold-coast' },
+            ],
+        },
+        {
+            title: 'Services',
+            items: [
+                { title: 'Bond Cleaning', href: '/bond-cleaning' },
+                { title: 'Carpet Cleaning', href: '/carpet-cleaning' },
+                { title: 'Office Cleaning', href: '/office-cleaning' },
             ],
         },
         {

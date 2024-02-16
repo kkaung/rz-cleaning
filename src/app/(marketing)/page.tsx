@@ -17,6 +17,7 @@ import Commitment from './_components/commitment';
 import { absoluteUrl } from '@/lib/utils';
 import { siteConfig } from '@/configs/site';
 import Featuring from './_components/featuring';
+import SocialVideos from '@/components/social-videos';
 
 export const runtime = 'edge';
 
@@ -38,7 +39,6 @@ export default function Page() {
                 <FAQs />
                 <About />
                 <LatestBlog />
-                {/* <Suburbs /> */}
                 <Commitment />
             </Shell>
             <OrganizationJsonLd
