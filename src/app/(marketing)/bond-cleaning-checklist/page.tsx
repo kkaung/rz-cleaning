@@ -1,20 +1,31 @@
-import { PageHeader, PageHeaderHeading } from '@/components/page-header';
+import React from 'react';
+import {
+    PageHeader,
+    PageHeaderDescription,
+    PageHeaderHeading,
+} from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
-import { getCity } from '@/lib/next';
+import { getPathname } from '@/lib/next';
 import { type Metadata } from 'next';
-import React from 'react';
+
+import Checklist from '../_components/checklist';
 
 export const runtime = 'edge';
 
-export const metadata: Metadata = {
-    title: 'End Of Lease Cleaning - Bond Cleaning Checklist',
-    description: '',
-};
+export function generateMetadata(): Metadata {
+    const pathname = getPathname();
+
+    return {
+        title: 'End Of Lease Cleaning - Bond Cleaning Checklist',
+        description: `Relax knowing you haven't missed a thing with our complete checklist. Maximise your bond return with our expert cleaning.`,
+        alternates: {
+            canonical: pathname,
+        },
+    };
+}
 
 export default function Page() {
-    const city = getCity();
-
     return (
         <Shell>
             <Breadcrumbs
@@ -24,11 +35,12 @@ export default function Page() {
                 ]}
                 dottable={false}
             />
-            <PageHeader>
+            <PageHeader className="text-center">
                 <PageHeaderHeading>
-                    End Of Lease & Bond Cleaning Checklist For {city}
+                    End Of Lease & Bond Cleaning Checklist
                 </PageHeaderHeading>
             </PageHeader>
+            <Checklist />
         </Shell>
     );
 }

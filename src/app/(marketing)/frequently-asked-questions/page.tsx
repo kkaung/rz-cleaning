@@ -12,7 +12,7 @@ export function generateMetadata(): Metadata {
     const pathname = getPathname();
 
     return {
-        title: 'FAQ',
+        title: 'Frequently Asked Questions About Bond Cleaning',
         description: `Find the answers you're looking for a house cleaning service.`,
         alternates: {
             canonical: pathname,

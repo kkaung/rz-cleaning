@@ -8,8 +8,7 @@ import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { Shell } from '@/components/shell';
 import { siteConfig } from '@/configs/site';
 import { type Author, allAuthors, allPosts } from 'contentlayer/generated';
-import PostCard from './_components/post-card';
-import type { Metadata } from 'next';
+import { type Metadata } from 'next';
 import {
     Pagination,
     PaginationContent,
@@ -19,14 +18,26 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from '@/components/ui/pagination';
+import { getPathname } from '@/lib/next';
+
 import { BlogTabs } from './_components/blog-tabs';
+
+import PostCard from './_components/post-card';
 
 export const runtime = 'edge';
 
-export const metadata: Metadata = {
-    title: 'Blog',
-    description: '',
-};
+export function generateMetadata(): Metadata {
+    const pathname = getPathname();
+
+    return {
+        title: 'Expert House Cleaning Tips And Tricks Blog',
+        description:
+            'Uncover professional insights, expert advice, and clever hacks to make house cleaning a breeze. Get a clean home you love!',
+        alternates: {
+            canonical: pathname,
+        },
+    };
+}
 
 export default function Page() {
     return (

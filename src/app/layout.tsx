@@ -58,7 +58,6 @@ export default async function RootLayout({ children }: PropsWithChildren) {
                 <Providers>{children}</Providers>
                 <TailwindIndicator />
                 <Toaster />
-                <GoogleTagManager gtmId={env.GA_MEASUREMENT_ID} />
             </body>
         </html>
     );

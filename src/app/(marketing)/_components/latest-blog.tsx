@@ -27,11 +27,11 @@ export default function LatestBlog({ ...props }: LatestBlogProps) {
                 Suggested Reads About Cleaning
             </h2>
             <Carousel className="w-full">
-                <CarouselContent className="-ml-1">
+                <CarouselContent className="-ml-6">
                     {allPosts.map((post, idx) => (
                         <CarouselItem
                             key={idx}
-                            className="pl-1 basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                            className="pl-6 basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
                         >
                             <div className="relative space-y-2">
                                 <AspectRatio
