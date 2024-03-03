@@ -79,9 +79,9 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
-                                <div className="text-base font-medium">
+                                <p className="text-base font-medium">
                                     {item.title}
-                                </div>
+                                </p>
                                 <ul className="space-y-2">
                                     {item.items.map(link => (
                                         <li key={link.title}>
@@ -199,6 +199,13 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 aria-hidden
                                 className="h-4 w-4"
                             />
+                        </Link>
+                        <Link
+                            target="_blank"
+                            href={siteConfig.links.coastmaid}
+                            title="CoastMaid - House Cleaner Gold Coast"
+                        >
+                            <Icons.crop aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>

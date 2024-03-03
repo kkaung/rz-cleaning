@@ -18,6 +18,8 @@ const links = {
     bondtoclean: 'https://bondtoclean.com.au/bond-cleaning-brisbane',
     bondcleaningsydney:
         'https://end-of-lease-bond-vacate-cleaning-sydney.com.au',
+    westmaid: 'https://westmaid.com.au',
+    coastmaid: 'https://coastmaid.com.au',
 };
 
 export const siteConfig = {
