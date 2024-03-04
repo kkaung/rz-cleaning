@@ -18,6 +18,7 @@ import { absoluteUrl } from '@/lib/utils';
 import { siteConfig } from '@/configs/site';
 import Featuring from './_components/featuring';
 import SocialVideos from '@/components/social-videos';
+import Sponsorship from './_components/sponsership';
 
 export const runtime = 'edge';
 
@@ -40,6 +41,7 @@ export default function Page() {
                 <About />
                 <LatestBlog />
                 <Commitment />
+                <Sponsorship />
             </Shell>
             <OrganizationJsonLd
                 useAppDir
