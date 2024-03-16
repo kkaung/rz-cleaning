@@ -25,7 +25,7 @@ const links = {
 export const siteConfig = {
     logo: 'RZCleaning',
     name: 'RZ Cleaning',
-    title: `Sydney's Premium House Cleaning Serivce`,
+    title: `End Of Lease Cleaning - Bond Cleaner`,
     description: '',
     url: 'https://rzcleaning.com.au',
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
@@ -145,7 +145,7 @@ export const siteConfig = {
     },
     rating: {
         ratingValue: '4.9',
-        ratingCount: '727',
+        ratingCount: 727,
     },
 };
 

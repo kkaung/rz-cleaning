@@ -13,9 +13,10 @@ export default function Sponsorship({ ...props }: SponsorshipProps) {
                     href={siteConfig.links.coastmaid}
                     target="_blank"
                     className="underline"
+                    title="Hosue Cleaning Service Gold Coast"
                 >
-                    Coast Maid
-                </Link>{' '}
+                    Coast Maid - Cleaning Service Gold Coast
+                </Link>
                 is your go-to choice for impeccable cleanliness and unparalleled
                 customer satisfaction. Experience the pinnacle of cleaning
                 services with Coast Maid today!

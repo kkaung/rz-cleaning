@@ -7,6 +7,7 @@ import { type HTMLAttributes } from 'react';
 import { Separator } from '@/components/ui/separator';
 
 import FooterTabs from '../footer-tabs';
+import SiteFooterSponsorship from './site-footer-sponsorship';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
@@ -101,6 +102,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                 </section>
                 <Separator />
                 <FooterTabs />
+                <SiteFooterSponsorship />
                 <Separator />
                 <section
                     id="footer-bottom"
@@ -182,30 +184,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             title="Yelp"
                         >
                             <Icons.yelp aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            target="_blank"
-                            href={siteConfig.links.bondtoclean}
-                            title="Bond Cleaning Service in Brisbane"
-                        >
-                            <Icons.sparkles aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            target="_blank"
-                            href={siteConfig.links.bondcleaningsydney}
-                            title="End Of Lease Cleaning Service In Sydney"
-                        >
-                            <Icons.personStanding
-                                aria-hidden
-                                className="h-4 w-4"
-                            />
-                        </Link>
-                        <Link
-                            target="_blank"
-                            href={siteConfig.links.coastmaid}
-                            title="CoastMaid - House Cleaner Gold Coast"
-                        >
-                            <Icons.crop aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
                 </section>
