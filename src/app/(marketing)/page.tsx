@@ -1,11 +1,9 @@
 import { Shell } from '@/components/shell';
 import { type Metadata } from 'next';
 import React from 'react';
-import { BreadcrumbJsonLd, OrganizationJsonLd } from 'next-seo';
 
 import Hero from './_components/hero';
 import HowWork from './_components/how-work';
-import Services from './_components/services';
 import Reviews from './_components/reviews';
 import FAQs from './_components/faqs';
 import Checklist from './_components/checklist';
@@ -23,7 +21,7 @@ import Sponsorship from './_components/sponsership';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: `End Of Lease Cleaning - Bond Cleaning`,
+    title: `End Of Lease Cleaning Sydney - 72hr Guaranteed Bond Cleaning`,
     description: `Professional End of Lease Cleaning Service in Sydney with 100% Bond Back Guarantee and the Lowest Price Guaranteed. Book online in less than 60 seconds.`,
 };
 
