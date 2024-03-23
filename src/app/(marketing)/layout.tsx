@@ -1,10 +1,10 @@
 import { type PropsWithChildren } from 'react';
 import { SiteHeader } from '@/components/layouts/site-header';
 import SiteFooter from '@/components/layouts/site-footer';
-import { OrganizationSchema } from '@/lib/dts-schema';
+import { graphSchemas } from '@/lib/dts-schema';
 
 export default async function Layout({ children }: PropsWithChildren) {
-    const jsonLd = OrganizationSchema;
+    const graph = graphSchemas;
 
     return (
         <>
@@ -15,7 +15,7 @@ export default async function Layout({ children }: PropsWithChildren) {
             </div>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
             />
         </>
     );

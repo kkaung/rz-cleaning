@@ -26,7 +26,8 @@ export const siteConfig = {
     logo: 'RZCleaning',
     name: 'RZ Cleaning',
     title: `End Of Lease Cleaning - Bond Cleaner`,
-    description: '',
+    description:
+        'Stressed about getting your security deposit back? We offer thorough end of lease cleaning in Sydney to ensure your rental gets the sparkle it needs to pass inspection. Book a bond clean with us today and get peace of mind!',
     url: 'https://rzcleaning.com.au',
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
     mainNav: [
