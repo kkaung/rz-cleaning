@@ -4,10 +4,6 @@ import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
-import { Separator } from '@/components/ui/separator';
-
-import FooterTabs from '../footer-tabs';
-import SiteFooterSponsorship from './site-footer-sponsorship';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
