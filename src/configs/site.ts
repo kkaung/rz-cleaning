@@ -140,7 +140,7 @@ export const siteConfig = {
     business: {
         email: 'contact@rzcleaning.com.au',
         phone: '1302 245 417',
-        address: '401/249 George St, 2017 NSW',
+        address: '249 George St, 2017 NSW',
         openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
     },
     rating: {
