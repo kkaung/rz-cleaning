@@ -1,9 +1,8 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { SlashIcon } from '@radix-ui/react-icons';
-import { absoluteUrl, cn, truncate } from '@/lib/utils';
+import { cn, truncate } from '@/lib/utils';
 import Dot from '@/components/dot';
-import { BreadcrumbJsonLd } from 'next-seo';
 import { Icons } from '@/components/icons';
 
 interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {

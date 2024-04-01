@@ -1,5 +1,5 @@
-import { Shell } from '@/components/shell';
 import { type Metadata } from 'next';
+import { Shell } from '@/components/shell';
 import React from 'react';
 
 import Hero from './_components/hero';
@@ -10,10 +10,9 @@ import Checklist from './_components/checklist';
 import Features from './_components/features';
 import Gurantee from './_components/gurantee';
 import LatestBlog from './_components/latest-blog';
-import About from './_components/about';
-import Commitment from './_components/commitment';
-import { absoluteUrl } from '@/lib/utils';
-import { siteConfig } from '@/configs/site';
+import About from '@/components/about';
+import Commitment from '@/components/commitment';
+
 import Featuring from './_components/featuring';
 import SocialVideos from '@/components/social-videos';
 import Sponsorship from './_components/sponsership';
@@ -21,8 +20,8 @@ import Sponsorship from './_components/sponsership';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: `End Of Lease Cleaning Sydney - 72hr Guaranteed Bond Cleaning`,
-    description: `Professional End of Lease Cleaning Service in Sydney with 100% Bond Back Guarantee and the Lowest Price Guaranteed. Book online in less than 60 seconds.`,
+    title: `RZ Cleaning Sydney - #1 Cleaning Service in Sydney, AU`,
+    description: `Sydney's #1 Rated House Cleaners. We offer professional cleaning services in Sydney. Book online in 60 seconds.`,
 };
 
 export default function Page() {
@@ -39,7 +38,6 @@ export default function Page() {
                 <About />
                 <LatestBlog />
                 <Commitment />
-                <Sponsorship />
             </Shell>
         </>
     );

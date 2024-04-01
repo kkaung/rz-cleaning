@@ -6,7 +6,7 @@ const isBrowser = typeof window !== 'undefined';
 
 export const OrganizationSchema: Organization = {
     '@type': 'Organization',
-    name: siteConfig.title,
+    name: siteConfig.name,
     description: siteConfig.description,
     logo: absoluteUrl('/images/logo.png'),
     ...(isBrowser && { url: absoluteUrl(window.location.pathname) }),
@@ -24,7 +24,7 @@ export const OrganizationSchema: Organization = {
 
 export const ProductSchema: Product = {
     '@type': 'Product',
-    name: siteConfig.title,
+    name: siteConfig.name,
     description: siteConfig.description,
     image: absoluteUrl('/images/logo.png'),
     brand: {

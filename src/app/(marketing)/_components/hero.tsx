@@ -13,7 +13,6 @@ import {
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
-import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
 import HeroOneImage from '/public/assets/images/hero-one.jpeg';
 import HeroTwoImage from '/public/assets/images/hero-two.jpeg';
@@ -37,27 +36,24 @@ export default function Hero({ ...props }: HeroProps) {
                 <Card className="max-w-lg shadow-none border-none md:shadow-lg md:rounded-xl">
                     <CardHeader className="py-6 pt-0 px-0 md:p-6 md:pb-0 md:pt-6">
                         <h1 className="font-extrabold text-4xl leading-none">
-                            <Balancer>
-                                Sydney&apos;s Favourite <br /> End Of Lease
-                                Cleaning Service
-                            </Balancer>
+                            Sydney&apos;s Most In Demand Cleaning Company
                         </h1>
                     </CardHeader>
                     <CardContent className="space-y-8 p-0 md:p-6">
-                        <p className="text-muted-foreground text-base">
-                            Lowest Price Guaranteed Bond Cleaning Service —
-                            trusted by thousands of customers across Sydney.
-                            Secure the return of your security bond with our
-                            thorough bond cleaning service.
+                        <p className="text-base">
+                            We&apos;re not just house cleaners, we&apos;re
+                            difference-makers. We transform cluttered spaces
+                            into sparkling havens, bringing order and calm to
+                            your busy life.
                         </p>
-                        <div className="space-y-3 leading-tight">
+                        <div className="space-y-3 leading-tight font-medium">
                             <div className="flex items-center">
                                 <Icons.check
                                     className="w-4 h-4 mr-2"
                                     aria-hidden
                                     strokeWidth={3}
                                 />
-                                <p>Vetted & Trusted Bond Cleaners</p>
+                                <p>Trusted Cleaners</p>
                             </div>
                             <div className="flex items-center">
                                 <Icons.check
@@ -65,7 +61,7 @@ export default function Hero({ ...props }: HeroProps) {
                                     aria-hidden
                                     strokeWidth={3}
                                 />
-                                <p>100% Bond Back Guarantee</p>
+                                <p>200% Guarantee</p>
                             </div>
                             <div className="flex items-center">
                                 <Icons.check
@@ -73,7 +69,7 @@ export default function Hero({ ...props }: HeroProps) {
                                     aria-hidden
                                     strokeWidth={3}
                                 />
-                                <p>Trusted by 1000+ monthly movers in Sydney</p>
+                                <p>Trusted by 1000+ monthly in Sydney</p>
                             </div>
                         </div>
                         <div className="flex gap-1 items-center text-sm">

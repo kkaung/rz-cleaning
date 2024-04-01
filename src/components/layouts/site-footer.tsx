@@ -15,12 +15,12 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
     return (
         <footer className="border-t">
             <Shell as="div">
-                <section
+                <div
                     id="footer-content"
                     aria-labelledby="footer-content-heading"
                     className="flex flex-col gap-6 lg:flex-row lg:gap-8"
                 >
-                    <section
+                    <div
                         id="footer-branding"
                         aria-labelledby="footer-branding-heading"
                         className="w-full lg:max-w-sm"
@@ -28,13 +28,14 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         <Link
                             aria-label="Home"
                             href="/"
-                            className="text-2xl italic flex items-center space-x-2"
+                            className="text-2xl italic flex items-center space-x-2 font-bold"
+                            title="RZ Cleaning Sydney"
                         >
-                            <span className="font-bold">{siteConfig.logo}</span>
+                            RZ Cleaning Sydney
                         </Link>
                         <p className="my-4 max-w-xs text-xs md:text-sm">
-                            You move out, we handle the meticulous cleanup with
-                            care.
+                            we turn cluttered, chaotic homes into spotless,
+                            serene sanctuaries.
                         </p>
                         <div className="flex flex-col mt-2 space-y-2">
                             <div className={cn('cursor-pointer text-sm')}>
@@ -72,7 +73,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 {siteConfig.business.openingHour}
                             </div>
                         </div>
-                    </section>
+                    </div>
                     <section
                         id="footer-links"
                         aria-labelledby="footer-links-heading"
@@ -99,12 +100,8 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             </div>
                         ))}
                     </section>
-                </section>
-                <Separator />
-                <FooterTabs />
-                <SiteFooterSponsorship />
-                <Separator />
-                <section
+                </div>
+                <div
                     id="footer-bottom"
                     aria-labelledby="footer-bottom-heading"
                     className="flex flex-col space-x-3 sm:flex-row sm:items-center"
@@ -186,7 +183,7 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             <Icons.yelp aria-hidden className="h-4 w-4" />
                         </Link>
                     </div>
-                </section>
+                </div>
             </Shell>
         </footer>
     );

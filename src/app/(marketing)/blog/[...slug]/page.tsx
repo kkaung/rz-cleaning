@@ -16,6 +16,7 @@ import { getPathname } from '@/lib/next';
 import { cities } from '@/configs/location';
 
 import Dot from '@/components/dot';
+import { siteConfig } from '@/configs/site';
 
 interface PostPageProps {
     params: {
@@ -133,22 +134,14 @@ export default async function PostPage({ params }: PostPageProps) {
                         key={author._id}
                         className="flex gap-2 items-center justify-center"
                     >
-                        <Image
-                            src={author.avatar}
-                            alt={author.title}
-                            width={42}
-                            height={42}
-                            className="rounded-full bg-white"
-                        />
                         <div className="flex flex-col ">
                             <div className="flex items-center gap-2">
                                 <p className="font-semibold">
-                                    by
                                     <Link
-                                        href={`/authors/${author.slugAsParams}`}
+                                        href="/"
                                         className="ml-1 hover:underline"
                                     >
-                                        {author.title}
+                                        RZ Cleaning Sydney
                                     </Link>
                                 </p>
                                 <Dot />
@@ -171,78 +164,102 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
             )}
             <Mdx code={post.body.code} />
-            <section className="my-8">
-                <Card className="border-0 bg-secondary/50 rounded-xl">
-                    <CardHeader>
-                        <div className="flex gap-4">
-                            <CardTitle>
-                                <Avatar>
-                                    <AvatarImage
-                                        src={author.avatar}
-                                        alt="Author Avatar"
-                                    />
-                                    <AvatarFallback>
-                                        {author.title.charAt(0).toUpperCase()}
-                                    </AvatarFallback>
-                                </Avatar>
-                            </CardTitle>
-                            <div className="font-semibold">
-                                <p className="text-xs text-muted-foreground">
-                                    Article by
-                                </p>
-                                <Link href={`/authors/${author.slugAsParams}`}>
-                                    <p className="relative text-primary hover:underline">
-                                        {author.title}
-                                    </p>
-                                </Link>
-                            </div>
-                        </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4 text-foreground">
-                        <p className="text-foreground">{author.description}</p>
-                        <div className="flex gap-4">
-                            <Link
-                                aria-label="Linkin"
-                                target="_blank"
-                                href={`https://www.linkedin.com/in/${author.linkin}`}
-                            >
-                                <Icons.linkin aria-hidden className="h-4 w-4" />
-                            </Link>
-                        </div>
-                    </CardContent>
-                </Card>
-            </section>
-            <section
-                id="bond-cleaners"
-                className="bg-secondary/50 p-6 rounded-lg space-y-4"
-            >
+            <section className="bg-secondary/50 p-6 rounded-lg space-y-4 mt-8">
                 <div className="space-y-2">
-                    <h3 className="font-semibold text-lg">
-                        Find bond cleaners in your city
-                    </h3>
+                    <div className="font-semibold">
+                        <Link href="/" rel="author">
+                            RZ Cleaning Sydney
+                        </Link>
+                    </div>
                     <p className="text-sm">
-                        BondToClean&apos;s network of verified local cleaners
-                        operates Australia-wide. Choose your city and get
-                        started now.
+                        RZ Cleaning Sydney is a top-rated house cleaning company
+                        in Gold Coast . We offer tailored cleaning services for
+                        your homes, apartments and offices.
                     </p>
-                </div>
-                <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-foreground/80 text-sm sm:grid-cols-2 md:grid-cols-3">
-                    {cities.map((city, idx) => (
-                        <li key={idx} className="group">
+                    <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-sm">
+                        <li>
                             <Link
-                                href={`/bond-cleaning-${city.toLowerCase()}`}
+                                href="/deep-cleaning-sydney"
+                                title="Deep Cleaning Service Sydney"
                                 className="hover:underline"
-                                title={`Bond Cleaner ${city}`}
                             >
-                                <Icons.mapPin
-                                    className="w-4 h-4 inline mr-1 text-foreground/80"
-                                    aria-hidden
-                                />
-                                <span>Bond Cleaner {city}</span>
+                                Deep Cleaning
                             </Link>
                         </li>
-                    ))}
-                </ul>
+                        <li>
+                            <Link
+                                href="/regular-cleaning-sydney"
+                                title="Regular Cleaning Service Sydney"
+                                className="hover:underline"
+                            >
+                                Regular Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/bond-cleaning-sydney"
+                                title="Bond Cleaning Service Sydney"
+                                className="hover:underline"
+                            >
+                                End Of Lease Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/office-cleaning-sydney"
+                                title="Office Cleaning Service Sydney"
+                                className="hover:underline"
+                            >
+                                Office Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/oven-cleaning-sydney"
+                                title="Oven Cleaning Service Sydney"
+                                className="hover:underline"
+                            >
+                                Oven Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/carpet-cleaning-sydney"
+                                title="Carpet Cleaning Service Sydney"
+                                className="hover:underline"
+                            >
+                                Carpet Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/window-cleaning-sydney"
+                                title="Window Cleaning Service Sydney"
+                                className="hover:underline"
+                            >
+                                Window Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/after-builder-cleaning-sydney"
+                                title="Post Construction Cleaning Service Sydney"
+                                className="hover:underline"
+                            >
+                                Construction Cleaning
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/airbnb-cleaning-sydney"
+                                title="Airbnb Cleaning Service Sydney"
+                                className="hover:underline"
+                            >
+                                Airbnb Cleaning
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <Breadcrumbs
                 segments={[

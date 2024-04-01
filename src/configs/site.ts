@@ -14,113 +14,103 @@ const links = {
 
     buynsw: 'https://buy.nsw.gov.au/supplier/profile/160972',
     yelp: 'https://www.yelp.com/biz/rz-cleaning-waterloo',
-
-    bondtoclean: 'https://bondtoclean.com.au/bond-cleaning-brisbane',
-    bondcleaningsydney:
-        'https://end-of-lease-bond-vacate-cleaning-sydney.com.au',
-    westmaid: 'https://westmaid.com.au',
-    coastmaid: 'https://coastmaid.com.au',
 };
 
 export const siteConfig = {
     logo: 'RZCleaning',
-    name: 'RZ Cleaning',
-    title: `End Of Lease Cleaning - Bond Cleaner`,
+    name: 'RZ Cleaning Sydney',
+    title: `RZ Cleaning Sydney`,
     description:
         'Stressed about getting your security deposit back? We offer thorough end of lease cleaning in Sydney to ensure your rental gets the sparkle it needs to pass inspection. Book a bond clean with us today and get peace of mind!',
     url: 'https://rzcleaning.com.au',
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
     mainNav: [
         {
-            title: 'Location',
-            items: [
-                { title: 'Sydney', href: '/bond-cleaning-sydney' },
-                { title: 'Melbourne', href: '/bond-cleaning-melbourne' },
-                { title: 'Brisbane', href: '/bond-cleaning-brisbane' },
-                { title: 'Perth', href: '/bond-cleaning-perth' },
-                { title: 'Adelaide', href: '/bond-cleaning-adelaide' },
-                { title: 'Canberra', href: '/bond-cleaning-canberra' },
-                { title: 'Gold Coast', href: '/bond-cleaning-gold-coast' },
-            ],
-        },
-        {
             title: 'Services',
             items: [
-                { title: 'Bond Cleaning', href: '/bond-cleaning' },
-                { title: 'Carpet Cleaning', href: '/carpet-cleaning' },
-                { title: 'Office Cleaning', href: '/office-cleaning' },
+                {
+                    title: 'Deep Cleaning',
+                    href: '/deep-cleaning-sydney',
+                },
+                {
+                    title: 'Regular Cleaning',
+                    href: '/regular-cleaning-sydney',
+                },
+                {
+                    title: 'End Of Lease Cleaning',
+                    href: '/end-of-lease-cleaning-sydney',
+                },
+                {
+                    title: 'Office Cleaning',
+                    href: '/office-cleaning-sydney',
+                },
+                {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning-sydney',
+                },
+                {
+                    title: 'Carpet Cleaning',
+                    href: '/carpet-cleaning-sydney',
+                },
+                {
+                    title: 'Window Cleaning',
+                    href: '/window-cleaning-sydney',
+                },
+                {
+                    title: 'After Builder Cleaning',
+                    href: '/after-builder-cleaning-sydney',
+                },
+                {
+                    title: 'Airbnb Cleaning',
+                    href: '/airbnb-cleaning-sydney',
+                },
             ],
         },
         {
             title: 'Pricing',
-            href: '/pricing',
+            href: '/house-cleaning-pricing-sydney',
         },
     ] satisfies MainNavItem[],
     links,
     footerNav: [
         {
-            title: 'Bond Cleaning',
+            title: 'Services',
             items: [
                 {
-                    title: 'Bond Cleaning Sydney',
-                    href: '/bond-cleaning-sydney',
+                    title: 'Deep Cleaning Sydney',
+                    href: '/deep-cleaning-sydney',
                 },
                 {
-                    title: 'Bond Cleaning Melbourne',
-                    href: '/bond-cleaning-melbourne',
+                    title: 'Regular Cleaning Sydney',
+                    href: '/regular-cleaning-sydney',
                 },
                 {
-                    title: 'Bond Cleaning Brisbane',
-                    href: '/bond-cleaning-brisbane',
+                    title: 'End Of Lease Cleaning',
+                    href: '/end-of-lease-cleaning-sydney',
                 },
                 {
-                    title: 'Bond Cleaning Perth',
-                    href: '/bond-cleaning-perth',
+                    title: 'Office Cleaning Sydney',
+                    href: '/office-cleaning-sydney',
                 },
                 {
-                    title: 'Bond Cleaning Canberra',
-                    href: '/bond-cleaning-canberra',
+                    title: 'Oven Cleaning Sydney',
+                    href: '/oven-cleaning-sydney',
                 },
                 {
-                    title: 'Bond Cleaning Gold Coast',
-                    href: '/bond-cleaning-gold-coast',
+                    title: 'Carpet Cleaning Sydney',
+                    href: '/carpet-cleaning-sydney',
                 },
                 {
-                    title: 'Bond Cleaning Adelaide',
-                    href: '/bond-cleaning-adelaide',
-                },
-            ],
-        },
-        {
-            title: 'Vacate Cleaning',
-            items: [
-                {
-                    title: 'Vacate Cleaning Sydney',
-                    href: '/vacate-cleaning-sydney',
+                    title: 'Window Cleaning Sydney',
+                    href: '/window-cleaning-sydney',
                 },
                 {
-                    title: 'Vacate Cleaning Melbourne',
-                    href: '/vacate-cleaning-melbourne',
+                    title: 'After Builder Cleaning Sydney',
+                    href: '/after-builder-cleaning-sydney',
                 },
                 {
-                    title: 'Vacate Cleaning Brisbane',
-                    href: '/vacate-cleaning-brisbane',
-                },
-                {
-                    title: 'Vacate Cleaning Canberra',
-                    href: '/vacate-cleaning-canberra',
-                },
-                {
-                    title: 'Vacate Cleaning Gold Coast',
-                    href: '/vacate-cleaning-gold-coast',
-                },
-                {
-                    title: 'Vacate Cleaning Perth',
-                    href: '/vacate-cleaning-perth',
-                },
-                {
-                    title: 'Vacate Cleaning Adelaide',
-                    href: '/vacate-cleaning-adelaide',
+                    title: 'Airbnb Cleaning Sydney',
+                    href: '/airbnb-cleaning-sydney',
                 },
             ],
         },
@@ -128,13 +118,22 @@ export const siteConfig = {
             title: 'Useful Links',
             items: [
                 { title: 'Contact Us', href: '/contact' },
-                { title: 'About Us', href: '/about' },
                 { title: 'Blog', href: '/blog' },
-                { title: 'Pricing', href: '/pricing' },
-                { title: 'Checklist', href: '/bond-cleaning-checklist' },
+                {
+                    title: 'Pricing',
+                    href: '/house-cleaning-pricing-sydney',
+                },
+                { title: 'Checklist', href: '/house-cleaning-checklist' },
                 { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },
+            ],
+        },
+        {
+            title: 'Company',
+            items: [
+                { title: 'About Us', href: '/about-us' },
+                { title: 'Careers', href: '/careers' },
             ],
         },
     ] satisfies FooterItem[],

@@ -19,19 +19,32 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
             )}
             {...props}
         >
-            <nav className="flex container max-w-7xl w-full h-16 items-center justify-between sm:h-14">
+            <div className="flex container max-w-7xl w-full h-16 items-center justify-between sm:h-14">
                 <div className="flex items-center gap-4 flex-1 sm:gap-8 sm:mr-6 md:flex-grow-0">
                     <MobileNav
                         mainNavItems={siteConfig.mainNav}
                         sidebarNavItems={siteConfig.mainNav}
                     />
-                    <Link aria-label="Home" href="/">
-                        <span className="font-extrabold text-2xl italic text-primary">
+                    <div className="relative">
+                        <div className="text-2xl italic flex items-center space-x-2 font-bold">
                             {siteConfig.logo}
-                        </span>
-                    </Link>
+                        </div>
+                        <Link
+                            aria-label="Home"
+                            href="/"
+                            className="inset-0 absolute"
+                            title={siteConfig.title}
+                        >
+                            <span className="sr-only">RZ Cleaning Sydney</span>
+                        </Link>
+                    </div>
                 </div>
                 <nav className="flex lg:flex-1 gap-4 items-center justify-between">
+                    <div className="sr-only">
+                        <Link href="/" title="Cleaner Sydney">
+                            Cleaner Sydney
+                        </Link>
+                    </div>
                     <MainNav items={siteConfig.mainNav} />
                     <div className="gap-3 flex items-center sm:gap-4 md:gap-6">
                         <Button variant="secondary">
@@ -52,7 +65,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         </Link>
                     </div>
                 </nav>
-            </nav>
+            </div>
         </header>
     );
 };
