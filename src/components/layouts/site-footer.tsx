@@ -9,7 +9,7 @@ interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
 export default async function SiteFooter({ ...props }: SiteFooterProps) {
     return (
-        <footer className="border-t" >
+        <footer className="border-t">
             <Shell as="div">
                 <div
                     id="footer-content"
@@ -28,6 +28,9 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             title="RZ Cleaning Sydney"
                         >
                             RZ Cleaning Sydney
+                        </Link>
+                        <Link href="/" className="hover:underline">
+                            Cleaner Near Me
                         </Link>
                         <div className="flex flex-col mt-2 space-y-2">
                             <div className={cn('cursor-pointer text-sm')}>
