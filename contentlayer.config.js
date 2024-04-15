@@ -26,30 +26,6 @@ const computedFields = {
     },
 };
 
-export const Author = defineDocumentType(() => ({
-    name: 'Author',
-    filePathPattern: `authors/**/*.mdx`,
-    contentType: 'mdx',
-    fields: {
-        title: {
-            type: 'string',
-            required: true,
-        },
-        description: {
-            type: 'string',
-        },
-        avatar: {
-            type: 'string',
-            required: true,
-        },
-        linkin: {
-            type: 'string',
-            required: true,
-        },
-    },
-    computedFields,
-}));
-
 export const Page = defineDocumentType(() => ({
     name: 'Page',
     filePathPattern: `pages/**/*.mdx`,
@@ -102,7 +78,7 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
     contentDirPath: './src/content',
     disableImportAliasWarning: true,
-    documentTypes: [Page, Post, Author],
+    documentTypes: [Page, Post],
     mdx: {
         remarkPlugins: [remarkGfm],
         rehypePlugins: [

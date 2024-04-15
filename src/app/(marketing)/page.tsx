@@ -16,12 +16,13 @@ import Commitment from '@/components/commitment';
 import Featuring from './_components/featuring';
 import SocialVideos from '@/components/social-videos';
 import Sponsorship from './_components/sponsership';
+import { siteConfig } from '@/configs/site';
 
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: `RZ Cleaning Sydney - #1 Cleaning Service in Sydney, AU`,
-    description: `Sydney's #1 Rated House Cleaners. We offer professional cleaning services in Sydney. Book online in 60 seconds.`,
+    title: `#1 House Cleaning Service in Sydney - ${siteConfig.name}`,
+    description: `Best Claning Service `,
 };
 
 export default function Page() {

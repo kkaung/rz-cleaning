@@ -13,6 +13,7 @@ import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { getPathname } from '@/lib/next';
 
 import Dot from '@/components/dot';
+import { siteConfig } from '@/configs/site';
 
 interface PostPageProps {
     params: {
@@ -54,8 +55,8 @@ export async function generateMetadata({
         description: post.description,
         authors: [
             {
-                name: author.title,
-                url: absoluteUrl(`/authors/${author.slugAsParams}`),
+                name: siteConfig.name,
+                url: absoluteUrl(`/`),
             },
         ],
         alternates: {
@@ -97,10 +98,6 @@ export default async function PostPage({ params }: PostPageProps) {
 
     if (!post) notFound();
 
-    const author = allAuthors.find(
-        author => author.slugAsParams === post.author
-    ) as Author;
-
     return (
         <section className="container relative max-w-3xl py-6 lg:py-10">
             <Link
@@ -126,10 +123,7 @@ export default async function PostPage({ params }: PostPageProps) {
                     )}
                 </div>
                 <div className="mt-4 flex space-x-4">
-                    <div
-                        key={author._id}
-                        className="flex gap-2 items-center justify-center"
-                    >
+                    <div className="flex gap-2 items-center justify-center">
                         <div className="flex flex-col ">
                             <div className="flex items-center gap-2">
                                 <p className="font-semibold">
