@@ -11,18 +11,15 @@ import {
     TableBody,
     TableCaption,
     TableCell,
-    TableFooter,
     TableHead,
     TableHeader,
     TableRow,
 } from '@/components/ui/table';
 import { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Author, allAuthors } from 'contentlayer/generated';
 import Link from 'next/link';
-import { Icons } from '@/components/icons';
 import { formatDate } from '@/lib/utils';
+import { siteConfig } from '@/configs/site';
 
 import FAQs from '../_components/faqs';
 
@@ -97,20 +94,21 @@ export default function Page() {
                 </PageHeader>
                 <div className="mx-auto prose prose-quoteless prose-neutral dark:prose-invert">
                     <p>
-                        Coast Maid provides a range of high-quality cleaning
-                        services, from house cleaning to{' '}
-                        <Link href="/office-cleaning-sydney">
+                        {siteConfig.name} provides a range of high-quality
+                        cleaning services, from house cleaning to{' '}
+                        <Link href="/end-of-lease-cleaning-sydney">
+                            {' '}
                             office cleaning
                         </Link>
                         ,{' '}
                         <Link href="/bond-cleaning-sydney">
                             end of lease cleaning
-                        </Link>{' '}
+                        </Link>
                         and{' '}
                         <Link href="/carpet-cleaning-sydney">
                             carpet cleaning
                         </Link>
-                        . We cater to homes throughout Gold Coast, offering
+                        . We cater to homes throughout Sydney, offering
                         top-notch cleaning solutions at affordable prices,
                         ensuring accessibility to the best cleaners in the city
                         for all.
@@ -148,7 +146,7 @@ export default function Page() {
                     </Table>
                 </section>
                 <FAQs />
-                <section className="my-8 max-w-xl mx-auto">
+                <section className="my-8 max-w-xl mx-auto bg-secondary p-6 rounded-lg">
                     <div className="space-y-2">
                         <div className="font-semibold">
                             <Link href="/" rel="author">
@@ -157,7 +155,7 @@ export default function Page() {
                         </div>
                         <p className="text-sm">
                             RZ Cleaning Sydney is a top-rated house cleaning
-                            company in Gold Coast . We offer tailored cleaning
+                            company in Sydney. We offer tailored cleaning
                             services for your homes, apartments and offices.
                         </p>
                         <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-sm">
@@ -231,15 +229,6 @@ export default function Page() {
                                     className="hover:underline"
                                 >
                                     Construction Cleaning
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/airbnb-cleaning-sydney"
-                                    title="Airbnb Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    Airbnb Cleaning
                                 </Link>
                             </li>
                         </ul>

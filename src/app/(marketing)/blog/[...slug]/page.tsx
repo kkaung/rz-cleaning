@@ -8,15 +8,11 @@ import { env } from '@/env.mjs';
 import { absoluteUrl, cn, formatDate } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { headingVariants } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { getPathname } from '@/lib/next';
-import { cities } from '@/configs/location';
 
 import Dot from '@/components/dot';
-import { siteConfig } from '@/configs/site';
 
 interface PostPageProps {
     params: {
@@ -173,8 +169,8 @@ export default async function PostPage({ params }: PostPageProps) {
                     </div>
                     <p className="text-sm">
                         RZ Cleaning Sydney is a top-rated house cleaning company
-                        in Gold Coast . We offer tailored cleaning services for
-                        your homes, apartments and offices.
+                        in Sydney. We offer tailored cleaning services for your
+                        homes, apartments and offices.
                     </p>
                     <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-sm">
                         <li>
