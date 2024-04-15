@@ -22,24 +22,22 @@ export const runtime = 'edge';
 
 export const metadata: Metadata = {
     title: `#1 House Cleaning Service in Sydney - ${siteConfig.name}`,
-    description: `Best Claning Service `,
+    description: `Best Cleaning Service ✔️ 100% Guarantee ✔️ 5 Star-Rated Cleaning ✔️ Trusted & Vetted Cleaners ✔️ Instant Online Booking`,
 };
 
 export default function Page() {
     return (
-        <>
-            <Shell>
-                <Hero />
-                <Reviews location="Sydney" />
-                <HowWork />
-                <Features />
-                <Checklist />
-                <Gurantee />
-                <FAQs />
-                <About />
-                <LatestBlog />
-                <Commitment />
-            </Shell>
-        </>
+        <Shell>
+            <Hero />
+            <Reviews location="Sydney" />
+            <HowWork />
+            <Features />
+            <Checklist />
+            <Gurantee />
+            <FAQs />
+            <About />
+            <LatestBlog />
+            <Commitment />
+        </Shell>
     );
 }
