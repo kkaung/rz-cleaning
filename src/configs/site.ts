@@ -17,7 +17,7 @@ const links = {
 };
 
 export const siteConfig = {
-    logo: 'RZCleaning',
+    logo: 'RZ Cleaning Sydney',
     name: 'RZ Cleaning Sydney',
     title: `RZ Cleaning Sydney`,
     description:
