@@ -1,16 +1,15 @@
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { cn } from '@/lib/utils';
-import type { Author, Post } from 'contentlayer/generated';
+import type { Post } from 'contentlayer/generated';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { type HTMLAttributes } from 'react';
 
 interface PostCardProps extends HTMLAttributes<HTMLElement> {
     post: Post;
-    author: Author;
 }
 
-export default function PostCard({ post, author, ...props }: PostCardProps) {
+export default function PostCard({ post, ...props }: PostCardProps) {
     return (
         <section className={cn(props.className, 'relative  space-y-2')}>
             <AspectRatio
