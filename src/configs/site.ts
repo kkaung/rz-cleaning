@@ -140,7 +140,7 @@ export const siteConfig = {
     business: {
         email: 'contact@rzcleaning.com.au',
         phone: '+61 414076980',
-        address: '249 George St, 2017 NSW',
+        address: '33 Shelley St, Sydney NSW 2000',
         openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
     },
     rating: {

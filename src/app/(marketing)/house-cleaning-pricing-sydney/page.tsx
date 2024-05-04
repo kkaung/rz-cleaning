@@ -26,7 +26,7 @@ import FAQs from '../_components/faqs';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: 'House Cleaning Prices In Sydney',
+    title: 'House Cleaning Prices in Sydney',
     description: `Get crystal clear pricing on Sydney's top-rated house cleaning services. Find the perfect fit for your budget and needs, with options from weekly refreshes to deep dives.`,
     alternates: {
         canonical: '/house-cleaning-pricing-sydney',
