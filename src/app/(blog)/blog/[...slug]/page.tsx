@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { type Author, allAuthors, allPosts } from 'contentlayer/generated';
+import { allPosts } from 'contentlayer/generated';
 import { Mdx } from '@/components/mdx/mdx-components';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -46,16 +46,12 @@ export async function generateMetadata({
     ogUrl.searchParams.set('type', 'Blog Post');
     ogUrl.searchParams.set('mode', 'dark');
 
-    const author = allAuthors.find(
-        author => author.slugAsParams === post.author
-    ) as Author;
-
     return {
         title: post.title,
         description: post.description,
         authors: [
             {
-                name: siteConfig.name,
+                name: siteConfig.title,
                 url: absoluteUrl(`/`),
             },
         ],

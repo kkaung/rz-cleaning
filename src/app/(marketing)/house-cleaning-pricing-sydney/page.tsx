@@ -16,7 +16,6 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { Metadata } from 'next';
-import { Author, allAuthors } from 'contentlayer/generated';
 import Link from 'next/link';
 import { formatDate } from '@/lib/utils';
 import { siteConfig } from '@/configs/site';
@@ -65,10 +64,6 @@ const pricingList = [
 ];
 
 export default function Page() {
-    const author = allAuthors.find(
-        author => author.slugAsParams === 'kaung'
-    ) as Author;
-
     return (
         <>
             <Shell as="article">
@@ -81,7 +76,7 @@ export default function Page() {
                 />
                 <PageHeader className="text-center">
                     <PageHeaderHeading>
-                        House Cleaning Pricing In Gold Coast
+                        House Cleaning Pricing in Sydney
                     </PageHeaderHeading>
                     <PageHeaderDescription className="mx-auto">
                         <time
@@ -146,94 +141,6 @@ export default function Page() {
                     </Table>
                 </section>
                 <FAQs />
-                <section className="my-8 max-w-xl mx-auto bg-secondary p-6 rounded-lg">
-                    <div className="space-y-2">
-                        <div className="font-semibold">
-                            <Link href="/" rel="author">
-                                RZ Cleaning Sydney
-                            </Link>
-                        </div>
-                        <p className="text-sm">
-                            RZ Cleaning Sydney is a top-rated house cleaning
-                            company in Sydney. We offer tailored cleaning
-                            services for your homes, apartments and offices.
-                        </p>
-                        <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-sm">
-                            <li>
-                                <Link
-                                    href="/deep-cleaning-sydney"
-                                    title="Deep Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    Deep Cleaning
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/regular-cleaning-sydney"
-                                    title="Regular Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    Regular Cleaning
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/bond-cleaning-sydney"
-                                    title="Bond Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    End Of Lease Cleaning
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/office-cleaning-sydney"
-                                    title="Office Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    Office Cleaning
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/oven-cleaning-sydney"
-                                    title="Oven Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    Oven Cleaning
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/carpet-cleaning-sydney"
-                                    title="Carpet Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    Carpet Cleaning
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/window-cleaning-sydney"
-                                    title="Window Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    Window Cleaning
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/after-builder-cleaning-sydney"
-                                    title="Post Construction Cleaning Service Sydney"
-                                    className="hover:underline"
-                                >
-                                    Construction Cleaning
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
             </Shell>
         </>
     );
