@@ -17,7 +17,7 @@ const links = {
 };
 
 export const siteConfig = {
-    logo: 'RZ Cleaning Sydney',
+    logo: 'RZ Cleaning',
     name: 'RZ Cleaning Sydney',
     title: `RZ Cleaning Sydney`,
     description:
@@ -123,6 +123,10 @@ export const siteConfig = {
                     title: 'Pricing',
                     href: '/house-cleaning-pricing-sydney',
                 },
+                {
+                    title: 'Products',
+                    href: '/products',
+                },
                 { title: 'Checklist', href: '/house-cleaning-checklist' },
                 { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy' },
@@ -140,7 +144,7 @@ export const siteConfig = {
     business: {
         email: 'contact@rzcleaning.com.au',
         phone: '+61 414076980',
-        address: '33 Shelley St, Sydney NSW 2000',
+        address: 'Suite 110, Level 1/350 Kent St, Sydney NSW 2000',
         openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
     },
     rating: {

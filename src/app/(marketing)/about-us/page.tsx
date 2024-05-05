@@ -10,8 +10,6 @@ import {
 } from '@/components/page-header';
 import Link from 'next/link';
 
-export const runtime = 'edge';
-
 export const metadata: Metadata = {
     title: `About Us - ${siteConfig.name}`,
     description: `Join us on our journey to revolutionize the cleaning industry! Get acquainted with our dedicated field and office staff members, and learn about the inception of ${siteConfig.name}.`,
@@ -41,34 +39,34 @@ export default function page() {
                     <h2>The Genesis</h2>
                     <p>
                         <Link href="/">{siteConfig.name}</Link> emerged from the
-                        visionary mind of{' '}
-                        <Link href="/authors/kaung">Kaung Zaw</Link>, a Sydney
-                        resident deeply attuned to the transformative influence
-                        of a tidy home on personal well-being. Recognizing the
-                        fast pace of contemporary living, Haroun conceptualized
-                        a dependable, top-tier cleaning service aimed at
-                        affording individuals the luxury of time and the
-                        serenity of a pristine living space.
+                        visionary mind of Kelvin RZ, a Sydney resident deeply
+                        attuned to the transformative influence of a tidy home
+                        on personal well-being. Recognizing the fast pace of
+                        contemporary living, Haroun conceptualized a dependable,
+                        top-tier cleaning service aimed at affording individuals
+                        the luxury of time and the serenity of a pristine living
+                        space.
                     </p>
                 </section>
                 <section>
                     <h2>The Mission</h2>
                     <p>
-                        Under Kaung&apos;s visionary leadership, Coast Maid
+                        Under Kelvin&apos;s visionary leadership,
+                        {siteConfig.name}
                         transcended its origins as a mere cleaning service,
                         evolving into a catalyst for enhanced lifestyles. By
                         relieving individuals of the burdensome task of
-                        household chores, Coast Maid strives to elevate the
-                        overall quality of life. Kaung perceives his company not
-                        only as a business entity but also as an indispensable
-                        cornerstone of the community.
+                        household chores, {siteConfig.name} strives to elevate
+                        the overall quality of life. Kelvin perceives his
+                        company not only as a business entity but also as an
+                        indispensable cornerstone of the community.
                     </p>
                 </section>
                 <section>
                     <h2>The Future</h2>
                     <p>
-                        Kaung&apos;s aspirations for Coast Maid reach far beyond
-                        traditional cleaning services. His goal is to
+                        Kelvin&apos;s aspirations for {siteConfig.name} reach
+                        far beyond traditional cleaning services. His goal is to
                         revolutionize customer satisfaction within the industry,
                         constantly adapting to meet the changing needs of
                         clients. While services may expand and diversify, the

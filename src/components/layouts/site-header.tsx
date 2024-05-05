@@ -26,7 +26,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         sidebarNavItems={siteConfig.mainNav}
                     />
                     <div className="relative">
-                        <div className="text-2xl italic flex items-center space-x-2 font-bold">
+                        <div className="text-2xl italic flex items-center space-x-2 font-bold text-nowrap">
                             {siteConfig.logo}
                         </div>
                         <Link
@@ -35,7 +35,7 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                             className="inset-0 absolute"
                             title={siteConfig.title}
                         >
-                            <span className="sr-only">RZ Cleaning Sydney</span>
+                            <span className="sr-only">{siteConfig.title}</span>
                         </Link>
                     </div>
                 </div>
@@ -62,6 +62,15 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                             href="/booking"
                         >
                             Book Online
+                        </Link>
+                        <Link
+                            href="/cart"
+                            className={cn(
+                                buttonVariants({ variant: 'secondary' })
+                            )}
+                            title="Shopping Cart"
+                        >
+                            <Icons.shoppingCart className="w-4 h-4" />
                         </Link>
                     </div>
                 </nav>

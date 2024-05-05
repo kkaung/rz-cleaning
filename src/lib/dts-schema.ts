@@ -61,7 +61,7 @@ export const LocalBusinessSchema: LocalBusiness = {
     telephone: siteConfig.business.phone,
     address: {
         '@type': 'PostalAddress',
-        streetAddress: '33 Shelley St',
+        streetAddress: 'Suite 110, Level 1/350 Kent St',
         postalCode: '2000',
         addressLocality: 'Sydney',
         addressCountry: 'Australia',
@@ -70,5 +70,10 @@ export const LocalBusinessSchema: LocalBusiness = {
 
 export const graphSchemas: Graph = {
     '@context': 'https://schema.org',
-    '@graph': [OrganizationSchema, WebSiteSchema, ProductSchema],
+    '@graph': [
+        OrganizationSchema,
+        WebSiteSchema,
+        ProductSchema,
+        LocalBusinessSchema,
+    ],
 };
