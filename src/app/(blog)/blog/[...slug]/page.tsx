@@ -11,9 +11,13 @@ import { Icons } from '@/components/icons';
 import { headingVariants } from '@/components/page-header';
 import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import { getPathname } from '@/lib/next';
+import Logo from '/public/logo.png';
 
 import Dot from '@/components/dot';
 import { siteConfig } from '@/configs/site';
+import { Graph, NewsArticle } from 'schema-dts';
+import { allCategories } from '@/configs/category';
+import Script from 'next/script';
 
 interface PostPageProps {
     params: {
@@ -25,7 +29,7 @@ async function getPostFromParams(params: any) {
     const slug = params?.slug?.join('/');
     const post = allPosts.find(post => post.slugAsParams === slug);
 
-    if (!post) null;
+    if (!post) return null;
 
     return post;
 }
@@ -51,8 +55,8 @@ export async function generateMetadata({
         description: post.description,
         authors: [
             {
-                name: siteConfig.title,
-                url: absoluteUrl(`/`),
+                name: siteConfig.name,
+                url: absoluteUrl('/'),
             },
         ],
         alternates: {
@@ -94,8 +98,79 @@ export default async function PostPage({ params }: PostPageProps) {
 
     if (!post) notFound();
 
+    const isReviewArticle = post.category === 'reviews';
+
+    const category = allCategories.find(c => c.slug === post.category)!;
+
+    const NewsArticleSchema: NewsArticle = {
+        '@type': 'NewsArticle',
+        '@id': post.slugAsParams,
+        headline: post.title,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: {
+            '@type': 'Organization',
+            name: siteConfig.name,
+            url: absoluteUrl('/'),
+            telephone: siteConfig.business.phone,
+            description: siteConfig.description,
+            address: {
+                '@type': 'PostalAddress',
+                streetAddress: siteConfig.business.detailsAddress.streetAddress,
+                postalCode: siteConfig.business.detailsAddress.postalCode,
+                addressRegion: siteConfig.business.detailsAddress.addressRegion,
+                addressLocality:
+                    siteConfig.business.detailsAddress.addressLocality,
+                addressCountry:
+                    siteConfig.business.detailsAddress.addressCountry,
+            },
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: siteConfig.name,
+            url: absoluteUrl('/'),
+            logo: absoluteUrl('/logo.png'),
+            telephone: siteConfig.business.phone,
+            description: siteConfig.description,
+            address: {
+                '@type': 'PostalAddress',
+                streetAddress: siteConfig.business.detailsAddress.streetAddress,
+                postalCode: siteConfig.business.detailsAddress.postalCode,
+                addressRegion: siteConfig.business.detailsAddress.addressRegion,
+                addressLocality:
+                    siteConfig.business.detailsAddress.addressLocality,
+                addressCountry:
+                    siteConfig.business.detailsAddress.addressCountry,
+            },
+        },
+        ...(isReviewArticle && {
+            aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: post.ratingValue,
+                reviewCount: post.ratingCount,
+                worstRating: 1,
+                bestRating: 5,
+            },
+        }),
+        articleSection: [''],
+        inLanguage: 'en-US',
+    };
+
+    const graphSchemas: Graph = {
+        '@context': 'https://schema.org',
+        '@graph': [NewsArticleSchema],
+    };
+
     return (
-        <section className="container relative max-w-3xl py-6 lg:py-10">
+        <article className="container relative max-w-3xl py-6 lg:py-10">
+            <Script
+                id="structured-data"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(graphSchemas),
+                }}
+                strategy="afterInteractive"
+            />
             <Link
                 href="/blog"
                 className={cn(
@@ -107,33 +182,42 @@ export default async function PostPage({ params }: PostPageProps) {
                 See all posts
             </Link>
             <div>
-                <h1 className={headingVariants({})}>{post.title}</h1>
-                <div className="mt-4">
-                    {post.date && (
-                        <time
-                            dateTime={post.date}
-                            className="block text-sm text-muted-foreground mb-2"
-                        >
-                            Updated on {formatDate(post.date)}
-                        </time>
-                    )}
-                </div>
+                <h1 itemProp="headline" className={headingVariants({})}>
+                    {post.title}
+                </h1>
                 <div className="mt-4 flex space-x-4">
                     <div className="flex gap-2 items-center justify-center">
                         <div className="flex flex-col ">
-                            <div className="flex items-center gap-2">
-                                <p className="font-semibold">
+                            <div className="flex items-center gap-3">
+                                <span
+                                    itemType="https://schema.org/Organization"
+                                    itemScope
+                                    itemProp="author"
+                                >
                                     <Link
                                         href="/"
-                                        className="ml-1 hover:underline"
+                                        className="text-sm ml-1 font-semibold sm:text-base hover:underline"
+                                        rel="author"
+                                        itemProp="url"
                                     >
-                                        RZ Cleaning Sydney
+                                        <span itemProp="name">
+                                            {siteConfig.name}
+                                        </span>
                                     </Link>
-                                </p>
+                                </span>
                                 <Dot />
-                                <p className="text-muted-foreground font-medium text-sm">
+                                {post.date && (
+                                    <time
+                                        dateTime={post.date}
+                                        className="text-sm text-muted-foreground"
+                                    >
+                                        {formatDate(post.date)}
+                                    </time>
+                                )}
+                                <Dot />
+                                <span className="text-muted-foreground font-medium text-sm">
                                     {post.readingTime} min read
-                                </p>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -150,107 +234,43 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
             )}
             <Mdx code={post.body.code} />
-            <section className="bg-secondary/50 p-6 rounded-lg space-y-4 mt-8">
+            <div className="bg-secondary/50 p-6 rounded-lg space-y-4 mt-8">
                 <div className="space-y-2">
-                    <div className="font-semibold">
-                        <Link href="/" rel="author">
-                            RZ Cleaning Sydney
+                    <div
+                        itemScope
+                        itemProp="http://schema.org/Person"
+                        className="inline-flex items-center gap-2 text-lg font-bold leading-none"
+                    >
+                        <Image
+                            width={32}
+                            height={32}
+                            src={Logo}
+                            alt="Brisbane Bond Cleaner Avatar"
+                            itemProp="image"
+                            className="h-8 w-8 rounded-full object-cover"
+                        />
+                        <Link
+                            className="font-semibold"
+                            href="/"
+                            rel="author"
+                            itemProp="url"
+                        >
+                            <span itemProp="name">{siteConfig.name}</span>
                         </Link>
                     </div>
-                    <p className="text-sm">
-                        RZ Cleaning Sydney is a top-rated house cleaning company
-                        in Sydney. We offer tailored cleaning services for your
-                        homes, apartments and offices.
+                    <p className="text-sm" itemProp="description">
+                        {siteConfig.description}
                     </p>
-                    <ul className="grid grid-cols-1 gap-x-4 gap-y-2 text-sm">
-                        <li>
-                            <Link
-                                href="/deep-cleaning-sydney"
-                                title="Deep Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                Deep Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/regular-cleaning-sydney"
-                                title="Regular Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                Regular Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/bond-cleaning-sydney"
-                                title="Bond Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                End Of Lease Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/office-cleaning-sydney"
-                                title="Office Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                Office Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/oven-cleaning-sydney"
-                                title="Oven Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                Oven Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/carpet-cleaning-sydney"
-                                title="Carpet Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                Carpet Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/window-cleaning-sydney"
-                                title="Window Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                Window Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/after-builder-cleaning-sydney"
-                                title="Post Construction Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                Construction Cleaning
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/airbnb-cleaning-sydney"
-                                title="Airbnb Cleaning Service Sydney"
-                                className="hover:underline"
-                            >
-                                Airbnb Cleaning
-                            </Link>
-                        </li>
-                    </ul>
                 </div>
-            </section>
+            </div>
             <Breadcrumbs
                 segments={[
                     { title: 'Home', href: '/' },
                     { title: 'Blog', href: '/blog' },
+                    {
+                        title: category.title,
+                        href: `/blog/${category.slug}`,
+                    },
                 ]}
                 dottable={false}
                 className="mt-12"
@@ -264,6 +284,6 @@ export default async function PostPage({ params }: PostPageProps) {
                     See all posts
                 </Link>
             </div>
-        </section>
+        </article>
     );
 }

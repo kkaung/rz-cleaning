@@ -25,26 +25,19 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                         mainNavItems={siteConfig.mainNav}
                         sidebarNavItems={siteConfig.mainNav}
                     />
-                    <div className="relative">
-                        <div className="text-2xl italic flex items-center space-x-2 font-bold text-nowrap">
-                            {siteConfig.logo}
-                        </div>
+                    <div className="flex items-center">
+                        <Icons.sparkles className="w-4 h-4 mr-1" />
                         <Link
                             aria-label="Home"
                             href="/"
-                            className="inset-0 absolute"
+                            className="hidden text-lg items-center space-x-2 font-bold text-nowrap sm:flex"
                             title={siteConfig.title}
                         >
-                            <span className="sr-only">{siteConfig.title}</span>
+                            {siteConfig.title}
                         </Link>
                     </div>
                 </div>
                 <nav className="flex lg:flex-1 gap-4 items-center justify-between">
-                    <div className="sr-only">
-                        <Link href="/" title="Cleaner Sydney">
-                            Cleaner Sydney
-                        </Link>
-                    </div>
                     <MainNav items={siteConfig.mainNav} />
                     <div className="gap-3 flex items-center sm:gap-4 md:gap-6">
                         <Button variant="secondary">

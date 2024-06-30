@@ -17,7 +17,6 @@ import Balancer from 'react-wrap-balancer';
 import Image from 'next/image';
 import HeroOneImage from '/public/assets/images/hero-one.jpeg';
 import HeroTwoImage from '/public/assets/images/hero-two.jpeg';
-import HeroThreeImage from '/public/assets/images/hero-three.jpeg';
 import Autoplay from 'embla-carousel-autoplay';
 import { siteConfig } from '@/configs/site';
 
@@ -40,15 +39,16 @@ export default function Hero({ location, ...props }: HeroProps) {
                     <CardHeader className="py-6 pt-0 px-0 md:p-6 md:pb-0 md:pt-6">
                         <h1 className="font-extrabold text-4xl leading-none">
                             <Balancer>
-                                Carpet Cleaning Service In {location}
+                                The #1 Carpet And Upholstery Cleaning Service In{' '}
+                                {location}
                             </Balancer>
                         </h1>
                     </CardHeader>
                     <CardContent className="space-y-8 p-0 md:p-6">
                         <p className="text-base">
-                            Our expert cleaning services go beyond surface-level
-                            shine, using eco-friendly, safe methods to tackle
-                            even the toughest dirt, stains, and allergens.
+                            Revitalize your home with our expert carpet and
+                            upholstery cleaning, bringing freshness to Sydney
+                            residences.
                         </p>
                         <div className="space-y-3 leading-tight">
                             <div className="flex items-center">
@@ -73,7 +73,9 @@ export default function Hero({ location, ...props }: HeroProps) {
                                     aria-hidden
                                     strokeWidth={3}
                                 />
-                                <p>Trusted by 1000+ monthly movers in Sydney</p>
+                                <p>
+                                    Trusted by 1000+ monthly families in Sydney
+                                </p>
                             </div>
                         </div>
                         <div className="flex gap-1 items-center text-sm">
@@ -94,7 +96,8 @@ export default function Hero({ location, ...props }: HeroProps) {
                                     'font-semibold'
                                 )}
                             >
-                                Get An Instant Quote
+                                <Icons.sparkles className="w-4 h-4 mr-1" /> Get
+                                An Instant Quote
                             </Link>
                             <div className="text-sm mt-2 itali px-4">
                                 It takes only 60 seconds
@@ -144,23 +147,6 @@ export default function Hero({ location, ...props }: HeroProps) {
                                             fill
                                             src={HeroTwoImage}
                                             alt="Moving Out Cleaner"
-                                            className="object-top object-cover bg-no-repeat"
-                                        />
-                                    </AspectRatio>
-                                </div>
-                            </div>
-                        </CarouselItem>
-                        <CarouselItem>
-                            <div className="p-1">
-                                <div className="overflow-hidden rounded-xl">
-                                    <AspectRatio
-                                        ratio={16 / 9}
-                                        className="bg-secondary"
-                                    >
-                                        <Image
-                                            fill
-                                            src={HeroThreeImage}
-                                            alt="Vacate Cleaner"
                                             className="object-top object-cover bg-no-repeat"
                                         />
                                     </AspectRatio>

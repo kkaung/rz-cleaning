@@ -4,6 +4,8 @@ import { Shell } from '@/components/shell';
 import { Icons } from '@/components/icons';
 import { cn } from '@/lib/utils';
 import { type HTMLAttributes } from 'react';
+import Image from 'next/image';
+import Logo from '/public/logo.png';
 
 interface SiteFooterProps extends HTMLAttributes<HTMLElement> {}
 
@@ -21,51 +23,130 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         aria-labelledby="footer-branding-heading"
                         className="w-full lg:max-w-sm"
                     >
-                        <Link
-                            aria-label="Home"
-                            href="/"
-                            className="text-2xl italic flex items-center space-x-2 font-bold"
-                            title="RZ Cleaning Sydney"
-                        >
-                            RZ Cleaning Sydney
-                        </Link>
-                        <Link href="/" className="hover:underline">
-                            Cleaner Near Me
-                        </Link>
-                        <div className="flex flex-col mt-2 space-y-2">
-                            <div className={cn('cursor-pointer text-sm')}>
-                                <Icons.mail
-                                    className="w-4 h-4 mr-1 inline"
-                                    aria-hidden
-                                />
-                                <span className="sr-only">Email</span>
-                                {siteConfig.business.email}
+                        <div className="inline-flex items-center gap-2 text-lg font-bold leading-none">
+                            <Image
+                                width={32}
+                                height={32}
+                                src={Logo}
+                                alt={`${siteConfig.name} Logo`}
+                                className="h-8 w-8 rounded-full object-cover"
+                            />
+                            <div>
+                                <Link
+                                    href="/"
+                                    className="text-lg flex items-center space-x-2 font-bold"
+                                    title={siteConfig.name}
+                                >
+                                    {siteConfig.name}
+                                </Link>
+                                <Link
+                                    href="/"
+                                    className="text-xs flex items-center space-x-2 font-semibold"
+                                >
+                                    Cleaning Services Sydney
+                                </Link>
                             </div>
-                            <div className={cn('cursor-pointer text-sm')}>
-                                <Icons.phone
-                                    className="w-4 h-4 mr-1 inline"
-                                    aria-hidden
-                                />
-                                <span className="sr-only">Phone Number</span>
-                                {siteConfig.business.phone}
+                        </div>
+                        <div className="mt-12 space-y-3">
+                            <div>
+                                <Link
+                                    href="/imprint"
+                                    className="text-base font-medium"
+                                >
+                                    Imprint
+                                </Link>
                             </div>
-                            <div className={cn('cursor-pointer text-sm')}>
-                                <Icons.mapPin
-                                    aria-hidden
-                                    className="w-4 h-4 mr-1 inline"
-                                />
-                                <span className="sr-only">Office Address</span>
-                                {siteConfig.business.address}
-                            </div>
-                            <div className={cn('cursor-pointer text-sm')}>
-                                <Icons.clock
-                                    aria-hidden
-                                    className="w-4 h-4 mr-1 inline"
-                                />
-                                <span className="sr-only">
-                                    Business Opening Hour
-                                </span>
-                                {siteConfig.business.openingHour}
+                            <div
+                                itemScope
+                                itemType="http://schema.org/LocalBusiness"
+                                className="flex flex-col space-y-2"
+                            >
+                                <div
+                                    itemProp="name"
+                                    className="font-bold text-sm"
+                                >
+                                    {siteConfig.name}
+                                </div>
+                                <Link
+                                    href={`mailto:${siteConfig.business.email}`}
+                                    className={cn('cursor-pointer text-sm')}
+                                >
+                                    <Icons.mail
+                                        className="w-4 h-4 mr-1 inline"
+                                        aria-hidden
+                                    />
+                                    <span itemProp="email">
+                                        {siteConfig.business.email}
+                                    </span>
+                                </Link>
+                                <Link
+                                    href={`tel:${siteConfig.business.phone}`}
+                                    className={cn('cursor-pointer text-sm')}
+                                >
+                                    <Icons.phone
+                                        className="w-4 h-4 mr-1 inline"
+                                        aria-hidden
+                                    />
+                                    <span itemProp="telephone">
+                                        {siteConfig.business.phone}
+                                    </span>
+                                </Link>
+                                <div
+                                    itemProp="address"
+                                    itemScope
+                                    itemType="http://schema.org/PostalAddress"
+                                    className={cn('cursor-pointer text-sm')}
+                                >
+                                    <Icons.mapPin
+                                        aria-hidden
+                                        className="w-4 h-4 mr-1 inline"
+                                    />
+                                    <span itemProp="streetAddress">
+                                        {
+                                            siteConfig.business.detailsAddress
+                                                .streetAddress
+                                        }
+                                    </span>
+                                    ,{' '}
+                                    <span itemProp="addressLocality">
+                                        {
+                                            siteConfig.business.detailsAddress
+                                                .addressLocality
+                                        }
+                                    </span>{' '}
+                                    <span itemProp="addressRegion">
+                                        {
+                                            siteConfig.business.detailsAddress
+                                                .addressRegion
+                                        }
+                                    </span>{' '}
+                                    <span itemProp="postalCode">
+                                        {
+                                            siteConfig.business.detailsAddress
+                                                .postalCode
+                                        }
+                                    </span>{' '}
+                                    <span itemProp="addressCountry">
+                                        {
+                                            siteConfig.business.detailsAddress
+                                                .addressCountry
+                                        }
+                                    </span>
+                                </div>
+                                <div className={cn('cursor-pointer text-sm')}>
+                                    <Icons.clock
+                                        aria-hidden
+                                        className="w-4 h-4 mr-1 inline"
+                                    />
+                                    {siteConfig.business.openingHour}
+                                </div>
+                                <Link
+                                    href="/"
+                                    className="text-muted-foreground text-sm mt-4 hover:text-primary"
+                                    itemProp="url"
+                                >
+                                    {siteConfig.domain}
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -76,22 +157,21 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                     >
                         {siteConfig.footerNav.map(item => (
                             <div key={item.title} className="space-y-3">
-                                <p className="text-base font-medium">
+                                <div className="text-base font-medium">
                                     {item.title}
-                                </p>
-                                <ul className="space-y-2">
+                                </div>
+                                <nav className="space-y-2">
                                     {item.items.map(link => (
-                                        <li key={link.title}>
-                                            <Link
-                                                href={link.href}
-                                                className="text-sm transition-colors line-clamp-1"
-                                                title={link.title}
-                                            >
-                                                {link.title}
-                                            </Link>
-                                        </li>
+                                        <Link
+                                            key={link.title}
+                                            href={link.href}
+                                            className="text-sm transition-colors line-clamp-1"
+                                            title={link.title}
+                                        >
+                                            {link.title}
+                                        </Link>
                                     ))}
-                                </ul>
+                                </nav>
                             </div>
                         ))}
                     </section>
@@ -143,11 +223,11 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             <Icons.youtube aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
-                            aria-label="Linkin"
+                            aria-label="Linkedin"
                             target="_blank"
-                            href={siteConfig.links.linkin}
+                            href={siteConfig.links.linkedin}
                             rel="nofollow"
-                            title="Linkin"
+                            title="Linkedin"
                         >
                             <Icons.linkin aria-hidden className="h-4 w-4" />
                         </Link>
@@ -159,14 +239,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             title="Pinterest"
                         >
                             <Icons.pinterest aria-hidden className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            aria-label="BUY NSW"
-                            target="_blank"
-                            href={siteConfig.links.buynsw}
-                            title="NSW Government registered ICT supplier"
-                        >
-                            <Icons.sticker aria-hidden className="h-4 w-4" />
                         </Link>
                         <Link
                             aria-label="Yelp"
@@ -183,3 +255,5 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
         </footer>
     );
 }
+
+

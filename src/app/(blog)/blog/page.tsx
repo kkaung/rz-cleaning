@@ -48,7 +48,7 @@ export default function Page() {
                     {siteConfig.name} House Cleaning Blog
                 </PageHeaderHeading>
                 <PageHeaderDescription size="sm" className="mx-auto">
-                    Simple solutions for a clean home.
+                    Simple Solutions For A Clean Home.
                 </PageHeaderDescription>
             </PageHeader>
             <section className="mt-8 max-w-5xl w-full mx-auto">

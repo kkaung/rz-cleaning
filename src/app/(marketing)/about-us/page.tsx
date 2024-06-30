@@ -31,7 +31,7 @@ export default function page() {
             <PageHeader className="mx-auto">
                 <PageHeaderHeading>{siteConfig.name} Story</PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto">
-                    Turning houses into homes.
+                    Turning Houses Into Homes.
                 </PageHeaderDescription>
             </PageHeader>
             <div className="mx-auto prose prose-quoteless prose-neutral dark:prose-invert">

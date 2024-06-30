@@ -21,7 +21,7 @@ export const OrganizationSchema: Organization = {
     address: siteConfig.business.address,
     sameAs: [
         siteConfig.links.facebook,
-        siteConfig.links.linkin,
+        siteConfig.links.linkedin,
         siteConfig.links.instagram,
         siteConfig.links.pinterest,
         siteConfig.links.youtube,

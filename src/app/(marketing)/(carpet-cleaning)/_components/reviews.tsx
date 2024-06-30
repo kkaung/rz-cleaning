@@ -112,10 +112,7 @@ function ReviewCard({ name, body, ...props }: ReviewCardProps) {
         >
             <div className="flex justify-between">
                 <div className="space-y-2">
-                    <div>
-                        <h6 className="font-medium">{name}</h6>
-                        <p></p>
-                    </div>
+                    <div className="font-medium">{name}</div>
                     <p className="text-sm italic mt-4 text-primary/80">
                         &quot;{body}&quot;
                     </p>

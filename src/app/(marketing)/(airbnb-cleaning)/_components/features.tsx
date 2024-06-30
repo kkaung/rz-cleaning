@@ -17,7 +17,7 @@ const items = [
         content: `Cleaning services are booked online with one simple process, using your phone or computer.`,
     },
     {
-        title: 'Expert Cleaners',
+        title: 'Expert Airbnb Cleaners',
         content: `Our staff are professionally trained so you can trust our cleaning teams to do the best job possible.`,
     },
     {

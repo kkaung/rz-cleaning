@@ -8,21 +8,21 @@ const links = {
     instagram: 'https://instagram.com/rzcleaning_au',
     twitter: 'https://twitter.com/rzclenaing_au',
     pinterest: 'https://www.pinterest.com.au/rzcleaning_syd',
-    linkin: 'https://www.linkedin.com/company/rz-cleaning',
+    linkedin: 'https://www.linkedin.com/company/rz-cleaning',
     youtube: 'https://www.youtube.com/channel/UC3Awh2GdY3eWuAxJx7_NtaQ',
     googlemap: '',
 
-    buynsw: 'https://buy.nsw.gov.au/supplier/profile/160972',
     yelp: 'https://www.yelp.com/biz/rz-cleaning-waterloo',
 };
 
 export const siteConfig = {
     logo: 'RZ Cleaning',
-    name: 'RZ Cleaning Sydney',
-    title: `RZ Cleaning Sydney`,
+    name: 'RZ Cleaning',
+    title: `RZ Cleaning`,
     description:
-        'Stressed about getting your security deposit back? We offer thorough end of lease cleaning in Sydney to ensure your rental gets the sparkle it needs to pass inspection. Book a bond clean with us today and get peace of mind!',
+        'RZ Cleaning is a top-rated cleaning company in Sydney, NSW. We offer tailored house cleaning and maid services for your homes, apartments and offices.',
     url: 'https://rzcleaning.com.au',
+    domain: 'rzcleaning.com.au',
     ogImage: 'https://rzcleaning.com.au/opengraph-image.png',
     mainNav: [
         {
@@ -85,7 +85,7 @@ export const siteConfig = {
                     href: '/regular-cleaning-sydney',
                 },
                 {
-                    title: 'End Of Lease Cleaning',
+                    title: 'End Of Lease Cleaning Sydney',
                     href: '/end-of-lease-cleaning-sydney',
                 },
                 {
@@ -133,6 +133,7 @@ export const siteConfig = {
                 { title: 'Terms And Conditions', href: '/terms' },
             ],
         },
+
         {
             title: 'Company',
             items: [
@@ -146,10 +147,17 @@ export const siteConfig = {
         phone: '+61 414076980',
         address: 'Suite 110, Level 1/350 Kent St, Sydney NSW 2000',
         openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
+        detailsAddress: {
+            streetAddress: 'Suite 110, Level 1/350 Kent St',
+            addressLocality: 'Sydney',
+            addressRegion: 'NSW',
+            postalCode: '2000',
+            addressCountry: 'Australia',
+        },
     },
     rating: {
         ratingValue: '4.9',
-        ratingCount: 727,
+        ratingCount: 1127,
     },
 };
 

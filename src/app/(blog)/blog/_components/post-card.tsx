@@ -16,24 +16,21 @@ export default function PostCard({ post, ...props }: PostCardProps) {
                 ratio={16 / 9}
                 className="overflow-hidden rounded-xl relative"
             >
-                <Image
-                    fill
-                    src={post.image}
-                    alt={`${post.title}`}
-                    className="bg-cover object-cover"
-                />
-                <Link
-                    href={`/blog/${post.slugAsParams}`}
-                    className="absolute inset-0"
-                >
-                    <span className="sr-only">View Blog Post</span>
+                <Link href={`/blog/${post.slugAsParams}`}>
+                    <Image
+                        fill
+                        src={post.image}
+                        alt={`${post.title}`}
+                        className="bg-cover object-cover"
+                    />
                 </Link>
             </AspectRatio>
             <div>
-                <Link href={`/blog/${post.slugAsParams}`}>
-                    <h4 className="text-xl font-semibold hover:underline">
-                        {post.title}
-                    </h4>
+                <Link
+                    className="text-xl font-semibold hover:underline"
+                    href={`/blog/${post.slugAsParams}`}
+                >
+                    {post.title}
                 </Link>
             </div>
         </section>

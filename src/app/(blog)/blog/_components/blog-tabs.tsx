@@ -19,7 +19,7 @@ export function BlogTabs({}: BlogTabsProps) {
         },
         {
             title: 'Guides',
-            href: `/blog/categories/guides`,
+            href: `/blog/category/guides`,
             isActive: segment === 'guides',
         },
     ];

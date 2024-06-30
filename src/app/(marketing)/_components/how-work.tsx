@@ -18,66 +18,53 @@ export default function HowWork({ ...props }: HowWorkProps) {
             )}
             {...props}
         >
-            <h2 className="font-extrabold text-4xl">How It Works</h2>
-            <ul className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
-                <li>
-                    <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
-                        <Image
-                            width={150}
-                            height={150}
-                            src={BookOnlieImage}
-                            className="md:mx-auto"
-                            alt="Book Online"
-                        />
-                        <div className="space-y-3">
-                            <p className="font-semibold text-lg">
-                                1. Book Online
-                            </p>
-                            <p>
-                                Book your cleaning service online in 60 seconds.
-                            </p>
+            <div className="font-extrabold text-4xl">How It Works</div>
+            <div className="grid grid-cols-1 gap-6 grid-flow-row md:grid-cols-3">
+                <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
+                    <Image
+                        width={150}
+                        height={150}
+                        src={BookOnlieImage}
+                        className="md:mx-auto"
+                        alt="Book Online"
+                    />
+                    <div className="space-y-3">
+                        <div className="font-semibold text-lg">1. Book Online</div>
+                        <div>Book your cleaning service online in 60 seconds.</div>
+                    </div>
+                </div>
+                <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
+                    <Image
+                        width={150}
+                        height={150}
+                        src={WeCleanImage}
+                        className="md:mx-auto"
+                        alt="We Clean"
+                    />
+                    <div className="space-y-3">
+                        <div className="font-semibold text-lg">2. We Clean</div>
+                        <div>
+                            Our expert cleaners will come over & professionally
+                            clean your home.
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
-                        <Image
-                            width={150}
-                            height={150}
-                            src={WeCleanImage}
-                            className="md:mx-auto"
-                            alt="We Clean"
-                        />
-                        <div className="space-y-3">
-                            <p className="font-semibold text-lg">2. We Clean</p>
-                            <p>
-                                Our expert cleaners will come over &
-                                professionally clean your home.
-                            </p>
+                </div>
+                <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
+                    <Image
+                        width={150}
+                        height={150}
+                        src={YouRelaxImage}
+                        alt="Book Online"
+                        className="md:mx-auto"
+                    />
+                    <div className="space-y-3">
+                        <div className="font-semibold text-lg">3. You Relax</div>
+                        <div>
+                            Sit back, relax and have your rental bond returned.
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div className="flex space-y-2 gap-4 sm:gap-6 md:flex-col md:gap-4">
-                        <Image
-                            width={150}
-                            height={150}
-                            src={YouRelaxImage}
-                            alt="Book Online"
-                            className="md:mx-auto"
-                        />
-                        <div className="space-y-3">
-                            <p className="font-semibold text-lg">
-                                3. You Relax
-                            </p>
-                            <p>
-                                Sit back, relax and have your rental bond
-                                returned.
-                            </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </section>
     );
 }

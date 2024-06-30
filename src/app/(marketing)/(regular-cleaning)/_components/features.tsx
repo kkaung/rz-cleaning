@@ -7,46 +7,50 @@ interface FeaturesProps extends HTMLAttributes<HTMLElement> {
     location: string;
 }
 
-const items = [
-    {
-        title: '200% Satisfaction Guarantee',
-        content: `Book with confidence knowing your satisfaction is guaranteed. If anything isn't spotless, we'll happily reclean the area in free of charge.`,
-    },
-    {
-        title: 'Simple & Easy Booking',
-        content: `Cleaning services are booked online with one simple process, using your phone or computer.`,
-    },
-    {
-        title: 'Expert Cleaners',
-        content: `Our staff are professionally trained so you can trust our cleaning teams to do the best job possible.`,
-    },
-    {
-        title: 'Cleaning Equipment Provided',
-        content: `For your convenience, our team brings their own cleaning equipment for each service.`,
-    },
-    {
-        title: 'Full Liability Insurance',
-        content: `Our cleaning service is covered by our $10 million public liability insurance.`,
-    },
-    {
-        title: 'Exceptional Customer Service',
-        content: `Trust our expert customer service team for comprehensive support from inquiry to post-service, ensuring your satisfaction at every stage.`,
-    },
-    {
-        title: 'Across Sydney',
-        content: `We’ve got insured & vetted house cleaners across Sydney, ready to help get you in getting your home sparkling clean.`,
-    },
-    {
-        title: 'No Hidden Fees',
-        content: `Our prices are final and fully inclusive of fuel and GST, and any other charges. What you see is what you pay.`,
-    },
-    {
-        title: '7 days / week',
-        content: `We’ve got cleaning teams available at any day of the week, including public holidays.`,
-    },
-];
+function getItems(location: string) {
+    return [
+        {
+            title: '200% Satisfaction Guarantee',
+            content: `Book with confidence knowing your satisfaction is guaranteed. If anything isn't spotless, we'll happily reclean the area in free of charge.`,
+        },
+        {
+            title: 'Simple & Easy Booking',
+            content: `Cleaning services are booked online with one simple process, using your phone or computer.`,
+        },
+        {
+            title: 'Expert Cleaners',
+            content: `Our staff are professionally trained so you can trust our cleaning teams to do the best job possible.`,
+        },
+        {
+            title: 'Cleaning Equipment Provided',
+            content: `For your convenience, our team brings their own cleaning equipment for each service.`,
+        },
+        {
+            title: 'Full Liability Insurance',
+            content: `Our cleaning service is covered by our $10 million public liability insurance.`,
+        },
+        {
+            title: 'Exceptional Customer Service',
+            content: `Trust our expert customer service team for comprehensive support from inquiry to post-service, ensuring your satisfaction at every stage.`,
+        },
+        {
+            title: `Across ${location}`,
+            content: `We’ve got insured & vetted house cleaners across ${location}, ready to help get you in getting your home sparkling clean.`,
+        },
+        {
+            title: 'No Hidden Fees',
+            content: `Our prices are final and fully inclusive of fuel and GST, and any other charges. What you see is what you pay.`,
+        },
+        {
+            title: '7 days / week',
+            content: `We’ve got cleaning teams available at any day of the week, including public holidays.`,
+        },
+    ];
+}
 
-export default function Features({ ...props }: FeaturesProps) {
+export default function Features({ location, ...props }: FeaturesProps) {
+    const items = getItems(location);
+
     return (
         <section
             id="features"

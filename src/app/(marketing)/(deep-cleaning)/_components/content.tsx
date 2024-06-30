@@ -4,12 +4,9 @@ import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 import Commitment from '@/components/commitment';
 
 import Hero from './hero';
-import FAQs from './faqs';
 import Features from './features';
 import Reviews from './reviews';
-
-import LatestBlog from '../../_components/latest-blog';
-import About from '@/components/about';
+import Services from './services';
 
 interface ContentProps {
     city: string;
@@ -19,17 +16,13 @@ interface ContentProps {
 
 export default function Content({ city, suburb, segments }: ContentProps) {
     return (
-        <>
-            <Shell>
-                <Hero location={city} />
-                <Reviews location={city} />
-                <Features location={city} />
-                <FAQs />
-                <About />
-                <LatestBlog />
-                <Commitment />
-                <Breadcrumbs segments={segments} dottable={false} />
-            </Shell>
-        </>
+        <Shell>
+            <Hero location={city} />
+            <Reviews location={city} />
+            <Features location={city} />
+            <Services location={city} />
+            <Commitment />
+            <Breadcrumbs segments={segments} dottable={false} />
+        </Shell>
     );
 }

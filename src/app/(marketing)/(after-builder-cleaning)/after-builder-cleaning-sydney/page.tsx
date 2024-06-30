@@ -21,6 +21,7 @@ export default function Page() {
             city={city}
             segments={[
                 { title: 'Home', href: '/' },
+                { title: 'Services', href: '/services' },
                 {
                     title: 'After Builder Cleaning',
                     href: '/after-builder-cleaning-sydney',

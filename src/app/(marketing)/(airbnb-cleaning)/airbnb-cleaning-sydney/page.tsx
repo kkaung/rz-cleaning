@@ -5,8 +5,6 @@ import { type Metadata } from 'next';
 import Content from '../_components/content';
 import { getMetadata } from '../_components/metadata';
 
-export const runtime = 'edge';
-
 export async function generateMetadata(): Promise<Metadata> {
     const city = getCityFromPath();
 
@@ -21,6 +19,7 @@ export default function Page() {
             city={city}
             segments={[
                 { title: 'Home', href: '/' },
+                { title: 'Services', href: '/services' },
                 {
                     title: 'Airbnb Cleaning',
                     href: '/airbnb-cleaning-sydney',

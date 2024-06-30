@@ -7,10 +7,9 @@ export { isType } from 'contentlayer/client'
 import allPages from './Page/_index.json' assert { type: 'json' }
 import allPosts from './Post/_index.json' assert { type: 'json' }
 import allProducts from './Product/_index.json' assert { type: 'json' }
-import allServices from './Service/_index.json' assert { type: 'json' }
 
-export { allPages, allPosts, allProducts, allServices }
+export { allPages, allPosts, allProducts }
 
-export const allDocuments = [...allPages, ...allPosts, ...allProducts, ...allServices]
+export const allDocuments = [...allPages, ...allPosts, ...allProducts]
 
 

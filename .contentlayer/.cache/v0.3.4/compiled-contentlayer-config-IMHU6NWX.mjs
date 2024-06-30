@@ -24,6 +24,38 @@ var computedFields = {
     }
   }
 };
+var Product = defineDocumentType(() => ({
+  name: "Product",
+  filePathPattern: `products/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true
+    },
+    description: {
+      type: "string",
+      required: true
+    },
+    image: {
+      type: "string",
+      required: true
+    },
+    price: {
+      type: "number",
+      required: true
+    },
+    ratingCount: {
+      type: "number",
+      required: true
+    },
+    ratingValue: {
+      type: "string",
+      required: true
+    }
+  },
+  computedFields
+}));
 var Page = defineDocumentType(() => ({
   name: "Page",
   filePathPattern: `pages/**/*.mdx`,
@@ -65,54 +97,16 @@ var Post = defineDocumentType(() => ({
     },
     category: {
       type: "enum",
-      options: [""],
+      options: ["reviews", "guides"],
       required: false
-    }
-  },
-  computedFields
-}));
-var Product = defineDocumentType(() => ({
-  name: "Product",
-  filePathPattern: `products/**/*.mdx`,
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      required: true
-    },
-    description: {
-      type: "string"
-    },
-    price: {
-      type: "number",
-      required: true
-    },
-    image: {
-      type: "string",
-      required: true
     },
     ratingValue: {
       type: "string",
-      required: true
+      required: false
     },
     ratingCount: {
       type: "number",
-      required: true
-    }
-  },
-  computedFields
-}));
-var Service = defineDocumentType(() => ({
-  name: "Service",
-  filePathPattern: `services/**/*.mdx`,
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      required: true
-    },
-    description: {
-      type: "string"
+      required: false
     }
   },
   computedFields
@@ -120,7 +114,7 @@ var Service = defineDocumentType(() => ({
 var contentlayer_config_default = makeSource({
   contentDirPath: "./src/content",
   disableImportAliasWarning: true,
-  documentTypes: [Page, Post, Product, Service],
+  documentTypes: [Page, Post, Product],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -181,7 +175,6 @@ export {
   Page,
   Post,
   Product,
-  Service,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-IKNFDEAG.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-IMHU6NWX.mjs.map
