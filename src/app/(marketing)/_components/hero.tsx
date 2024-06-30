@@ -42,10 +42,9 @@ export default function Hero({ ...props }: HeroProps) {
                     </CardHeader>
                     <CardContent className="space-y-8 p-0 md:p-6">
                         <p className="text-base">
-                            We&apos;re not just house cleaners, we&apos;re
-                            difference-makers. We transform cluttered spaces
-                            into sparkling havens, bringing order and calm to
-                            your busy life.
+                            Delivering exceptional cleanliness to Sydney homes
+                            and businesses with our highly sought-after
+                            professional cleaning services.
                         </p>
                         <div className="space-y-3 leading-tight font-medium">
                             <div className="flex items-center">
