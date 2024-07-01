@@ -48,7 +48,6 @@ const SiteHeader = ({ ...props }: SiteHeaderProps) => {
                             <span className="hidden sm:inline">
                                 {siteConfig.business.phone}
                             </span>
-                            <span className="sr-only">Phone Number</span>
                         </Button>
                         <Link
                             className={cn(buttonVariants({}))}
